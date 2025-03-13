@@ -9,23 +9,23 @@
       
       
       
+        <link rel="prev" href="../freyja_basics/">
       
-        <link rel="next" href="environment_setup/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>Nextflow & Freyja Tutorial</title>
+        <title>Overview - Nextflow & Freyja Tutorial</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nextflow-tutorial-with-freyja" class="md-skip">
+        <a href="#building-a-nextflow-pipeline-with-freyja" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Nextflow &amp; Freyja Tutorial" class="md-header__button md-logo" aria-label="Nextflow & Freyja Tutorial" data-md-component="logo">
+    <a href=".." title="Nextflow &amp; Freyja Tutorial" class="md-header__button md-logo" aria-label="Nextflow & Freyja Tutorial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Overview
             
           </span>
         </div>
@@ -207,7 +207,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Nextflow &amp; Freyja Tutorial" class="md-nav__button md-logo" aria-label="Nextflow & Freyja Tutorial" data-md-component="logo">
+    <a href=".." title="Nextflow &amp; Freyja Tutorial" class="md-nav__button md-logo" aria-label="Nextflow & Freyja Tutorial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -222,31 +222,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -256,95 +235,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      What You'll Learn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tutorial-outline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tutorial Outline
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tutorial Outline">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Nextflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-freyja" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Freyja
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#building-a-nextflow-pipeline-with-freyja" class="md-nav__link">
-    <span class="md-ellipsis">
-      Building a Nextflow Pipeline with Freyja
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hands-on-exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hands-on Exercises
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Topics
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -392,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="environment_setup/" class="md-nav__link">
+      <a href="../environment_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nextflow_overview/" class="md-nav__link">
+      <a href="../nextflow_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="channels/" class="md-nav__link">
+      <a href="../channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="processes/" class="md-nav__link">
+      <a href="../processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -523,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="operators/" class="md-nav__link">
+      <a href="../operators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="workflows/" class="md-nav__link">
+      <a href="../workflows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="freyja_basics/" class="md-nav__link">
+      <a href="../freyja_basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,17 +482,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -617,7 +509,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Building nexflow pipeline
@@ -628,10 +520,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="pipeline_overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -641,6 +554,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -660,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="customizing_parameters.md" class="md-nav__link">
+      <a href="../customizing_parameters.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="handling_multiple_samples.md" class="md-nav__link">
+      <a href="../handling_multiple_samples.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="parallel_execution.md" class="md-nav__link">
+      <a href="../parallel_execution.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="debugging_troubleshooting.md" class="md-nav__link">
+      <a href="../debugging_troubleshooting.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="best_practices.md" class="md-nav__link">
+      <a href="../best_practices.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="containers_reproducibility.md" class="md-nav__link">
+      <a href="../containers_reproducibility.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -806,71 +757,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What You'll Learn
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tutorial-outline" class="md-nav__link">
+  <a href="#project-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Tutorial Outline
+      Project Structure
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Tutorial Outline">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Nextflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-freyja" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Freyja
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#building-a-nextflow-pipeline-with-freyja" class="md-nav__link">
-    <span class="md-ellipsis">
-      Building a Nextflow Pipeline with Freyja
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hands-on-exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hands-on Exercises
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Topics
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -890,48 +790,46 @@
 
 
 
-<h1 id="nextflow-tutorial-with-freyja"><strong>Nextflow Tutorial with Freyja</strong></h1>
-<p>Welcome to the <strong>Nextflow Training Tutorial</strong>! This tutorial is designed to teach you <a href="https://www.nextflow.io/docs/latest/overview.html">Nextflow</a> by using examples with <a href="https://andersen-lab.github.io/Freyja/index.html#">Freyja</a>, a tool for analyzing SARS-CoV-2 wastewater sequencing data.</p>
-<h2 id="what-youll-learn">What You'll Learn</h2>
-<ul>
-<li><strong>Introduction to Nextflow</strong> – Basics, syntax, and workflow concepts</li>
-<li><strong>Understanding Freyja</strong> – What it does and how it works</li>
-<li><strong>Building a Nextflow pipeline</strong> to process sequencing data using Freyja</li>
-<li><strong>Running and optimizing Nextflow workflows</strong></li>
+<h1 id="building-a-nextflow-pipeline-with-freyja"><strong>Building a Nextflow Pipeline with Freyja</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>In this section, we'll build a <strong>Nextflow pipeline</strong> integrating <strong>Freyja</strong> commands from the previous section. We'll demonstrate how <strong>processes, channels, and operators</strong> work together by using three interconnected modules (processes):</p>
+<ol>
+<li><strong>Preprocessing Module</strong> – Uses <code>freyja variants</code> to extract variant and depth files.  </li>
+<li><strong>Freyja Analysis Module</strong> – Runs <code>freyja demix</code> on the processed data to generate variant analysis results.  </li>
+<li><strong>Co-variants Analysis Module</strong> – Uses <code>freyja covariants</code> to identify co-occurring mutations.  </li>
+</ol>
+<hr />
+<h2 id="project-structure"><strong>Project Structure</strong></h2>
+<p>Here's how our pipeline will be structured:
+<div class="highlight"><pre><span></span><code>training/
+│-- main.nf
+│-- nextflow.config
+|-- modules/
+|   ├── freyja_variants.nf 
+|   ├── freyja_demax.nf 
+|   ├── freyja_covariants.nf 
+│-- data/
+│   ├── samples.csv
+│   ├── ban_files/
+</code></pre></div></p>
+<p>Breaking it Down:</p>
+<ol>
+<li><code>training/</code> - Root directory that contains all the files and folders for the Nextflow pipeline.</li>
+<li><code>main.nf</code> – The main script that defines how the pipeline runs. It connects different steps and manages data flow.</li>
+<li><code>nextflow.config</code> – A settings file where we define parameters like memory, CPU usage, and other execution settings.</li>
+<li><code>modules</code> - A folder containing small, reusable nextflow scripts (modules) that handle different tasks in the pipeline.<ul>
+<li><code>freyja_variants.nf</code> - Runs freyja variants to extract variant and depth information from BAM files.</li>
+<li><code>freyja_demax.nf</code> - Runs freyja demix to estimate lineage abundances.</li>
+<li><code>freyja_covariants.nf</code> - Runs freyja covariants to identify co-occurring mutations.</li>
 </ul>
-<h2 id="tutorial-outline">Tutorial Outline</h2>
-<h3 id="introduction-to-nextflow"><strong>Introduction to Nextflow</strong></h3>
-<ul>
-<li>What is Nextflow?</li>
-<li>Why use Nextflow for bioinformatics?</li>
-<li>Basic concepts: processes, channels, and DAGs</li>
-<li>Installation and setup</li>
+</li>
+<li><code>data/</code> – This folder holds input files needed for the pipeline, such as sequencing data and sample information.<ul>
+<li><code>samples.csv</code> – A file listing sample names and paths to sequencing files.</li>
+<li><code>bam_files/</code> – A directory containing BAM files, which store aligned sequencing reads.</li>
 </ul>
-<h3 id="introduction-to-freyja"><strong>Introduction to Freyja</strong></h3>
-<ul>
-<li>Overview of Freyja and its purpose</li>
-<li>How it processes sequencing data</li>
-<li>Expected inputs and outputs</li>
-<li>Example command-line usage</li>
-</ul>
-<h3 id="building-a-nextflow-pipeline-with-freyja"><strong>Building a Nextflow Pipeline with Freyja</strong></h3>
-<ul>
-<li>Creating a <code>nextflow.config</code> file</li>
-<li>Writing a basic Nextflow script (<code>main.nf</code>)</li>
-<li>Running and debugging the workflow</li>
-</ul>
-<h3 id="hands-on-exercises"><strong>Hands-on Exercises</strong></h3>
-<ul>
-<li>Running a basic pipeline</li>
-<li>Modifying the workflow (e.g., changing parameters)</li>
-<li>Interpreting Freyja’s output</li>
-</ul>
-<h3 id="advanced-topics"><strong>Advanced Topics</strong></h3>
-<ul>
-<li>Using containers (Docker/Singularity) for reproducibility</li>
-<li>Scaling with cloud or HPC</li>
-<li>Adding error handling and logging</li>
-</ul>
+</li>
+</ol>
+<hr />
 
 
 
@@ -960,22 +858,22 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-        
           
-          <a href="environment_setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Local installation">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Local installation
-              </div>
-            </div>
+          <a href="../freyja_basics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Freyja Basics">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Freyja Basics
+              </div>
             </div>
           </a>
+        
         
       </nav>
     
@@ -1002,10 +900,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.footer"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
