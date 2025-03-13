@@ -551,9 +551,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-freyja-demix" class="md-nav__link">
+  <a href="#running-freyja-demixcommand" class="md-nav__link">
     <span class="md-ellipsis">
-      Running freyja demix
+      Running freyja demixcommand
     </span>
   </a>
   
@@ -827,9 +827,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-freyja-demix" class="md-nav__link">
+  <a href="#running-freyja-demixcommand" class="md-nav__link">
     <span class="md-ellipsis">
-      Running freyja demix
+      Running freyja demixcommand
     </span>
   </a>
   
@@ -868,62 +868,49 @@
 <h2 id="understanding-freyja-commands"><strong>Understanding Freyja Commands</strong></h2>
 <p>Freyja provides several commands for analyzing sequencing data. In this tutorial, we will focus on three key commands:</p>
 <ul>
-<li><code>freyja variants</code> – Extracts variant and depth information from sequencing data.</li>
-<li><code>freyja demix</code> – Estimates the relative abundances of viral lineages.</li>
-<li><code>freyja covariants</code> – Identifies co-occurring mutations in the dataset.
-These commands form the foundation of the Nextflow pipeline we will build in the next section.</li>
+<li><a href="https://andersen-lab.github.io/Freyja/src/usage/variants.html"><code>freyja variants</code></a> – This command analyzes a BAM file to identify genetic variants using samtools and iVar</li>
+<li><a href="https://andersen-lab.github.io/Freyja/src/usage/demix.html"><code>freyja demix</code></a> – Estimates the relative abundances of viral lineages.</li>
 </ul>
+<p>These commands form the foundation of the Nextflow pipeline we will build in the next section.</p>
 <hr />
 <h2 id="running-freyja-commands"><strong>Running Freyja Commands</strong></h2>
 <p>Now that we understand the key Freyja commands, let's see how they are executed.</p>
-<h3 id="running-freyja-variants-command">Running <strong><code>freyja variants</code></strong> command</h3>
+<h3 id="running-freyja-variants-command"><strong>Running <code>freyja variants</code> command</strong></h3>
 <p>This command extracts variant and depth information from a sequencing dataset.
-<div class="highlight"><pre><span></span><code>freyja<span class="w"> </span>variants<span class="w"> </span>input_file.bam<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--variants<span class="w"> </span>sra_accession.tsv<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--depths<span class="w"> </span>sra_accession.depths<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--ref<span class="w"> </span>reference.fasta
+<div class="highlight"><pre><span></span><code>freyja<span class="w"> </span>variants<span class="w"> </span>sample1.bam<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--variants<span class="w"> </span>sample1_variants.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--depths<span class="w"> </span>sample1.depths<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--ref<span class="w"> </span>ref_genome.fasta
 </code></pre></div>
 Breakdown:</p>
 <ul>
-<li><strong><em>input_file.bam</em></strong> – Input BAM file containing aligned sequencing reads.</li>
-<li><code>--variants</code> <strong><em>sra_accession.tsv</em></strong> – Output file storing variant information.</li>
-<li><code>--depths</code> <strong><em>sra_accession.depths</em></strong> – Output file storing sequencing depth information.</li>
-<li><code>--ref</code> <strong><em>reference.fasta</em></strong> – input Reference genome file to align against.</li>
+<li><strong><em>sample1.bam</em></strong> – Input BAM file containing aligned sequencing reads.</li>
+<li><code>--variants</code> <strong><em>sample1_variants.tsv</em></strong> – Output file storing variant information.</li>
+<li><code>--depths</code> <strong><em>sample1.depth</em></strong> – Output file storing sequencing depth information.</li>
+<li><code>--ref</code> <strong><em>ref_genome.fasta</em></strong> – input Reference genome file to align against.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>freyja variants</code> command above takes <strong>2 input files</strong>: a <strong>BAM file</strong> (sequencing data) and a <strong>FASTA file</strong> (reference genome). It produces <strong>2 output files</strong>: a <strong>.depth file</strong> (sequencing depth information) and a <strong>.tsv file</strong> (variant details).</p>
+</div>
 <hr />
-<h3 id="running-freyja-demix">Running <strong><code>freyja demix</code></strong></h3>
+<h3 id="running-freyja-demixcommand"><strong>Running <code>freyja demix</code>command</strong></h3>
 <p>Once we have the variant and depth files, we can estimate lineage abundances.</p>
-<p><div class="highlight"><pre><span></span><code>freyja<span class="w"> </span>demix<span class="w"> </span>variants_file<span class="w"> </span>depths_file<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--eps<span class="w"> </span>params.eps<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--output<span class="w"> </span>sample_id.demix.tsv<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--barcodes<span class="w"> </span>barcodes_file
+<p><div class="highlight"><pre><span></span><code>freyja<span class="w"> </span>demix<span class="w"> </span>sample1_variants.tsv<span class="w"> </span>sample1.depth<span class="w"> </span><span class="se">\</span>
+--output<span class="w"> </span>sample_id.demix.tsv
 </code></pre></div>
 Breakdown:</p>
 <ul>
-<li><strong><em>variants_file</em></strong> – Input variant file from freyja variants.</li>
-<li><strong><em>depths_file</em></strong> – Input depth file from freyja variants.</li>
-<li><code>--eps</code> <strong><em>params.eps</em></strong> – Error parameter to refine lineage estimates.</li>
-<li><code>--output</code> <strong><em>sample_id.demix.tsv</em></strong> – Output file storing lineage proportions.</li>
-<li><code>--barcodes</code> <strong><em>barcodes_file</em></strong> – Barcode file used to match variants to lineages.</li>
+<li><strong><em>sample1_variants.tsv</em></strong> – Input variant file from freyja variants.</li>
+<li><strong><em>sample1.depth</em></strong> – Input depth file from freyja variants.</li>
+<li><code>--output</code> <strong><em>sample1_demix.tsv</em></strong> – Output file storing detected lineages, their relative abundances, and a summary based on known variant groups. .</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>freyja demix</code> command above takes <strong>2 input files</strong>: a <strong>.depth file</strong> (sequencing depth information) and a <strong>.tsv file</strong> (variant details) and generates <strong>1 .tsv output file (relative abundance)</strong>: </p>
+</div>
 <hr />
-<p>Running freyja covariants
-This command identifies co-occurring mutations in the dataset.</p>
-<div class="highlight"><pre><span></span><code>freyja<span class="w"> </span>covariants<span class="w"> </span>input_file.bam<span class="w"> </span>num_min_site<span class="w"> </span>num_max_site<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--ref-genome<span class="w"> </span>ref_genome.fasta<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--output<span class="w"> </span>sra_accession.covariants.tsv<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--annot<span class="w"> </span>annotation_file
-</code></pre></div>
-<p>Breakdown:</p>
-<ul>
-<li><strong><em>${input_bam}</em></strong> – Input BAM file with aligned sequencing data.</li>
-<li><strong><em>min_site_num</em></strong> and <strong><em>max_site_num</em></strong> – Genomic region to analyze.</li>
-<li><code>--ref-genome</code> <strong><em>ref_genome.fasta</em></strong> – Reference genome for alignment.</li>
-<li><code>--output</code> <strong><em>sra_accession.covariants.tsv</em></strong> – Output file with co-occurring mutations.</li>
-<li><code>--annot</code> <strong><em>annotation_file</em></strong> – Annotation file to interpret results.</li>
-</ul>
-<hr />
-<p>Now that we've covered Freyja’s essential commands, we’re ready to integrate them into a nextflow pipeline!</p>
+<p>Since we've covered two key Freyja commands, we can now integrate them into a Nextflow pipeline to reinforce Nextflow concepts.</p>
 <hr />
 
 

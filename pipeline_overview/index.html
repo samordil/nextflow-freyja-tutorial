@@ -792,11 +792,10 @@
 
 <h1 id="building-a-nextflow-pipeline-with-freyja"><strong>Building a Nextflow Pipeline with Freyja</strong></h1>
 <h2 id="overview"><strong>Overview</strong></h2>
-<p>In this section, we'll build a <strong>Nextflow pipeline</strong> integrating <strong>Freyja</strong> commands from the previous section. We'll demonstrate how <strong>processes, channels, and operators</strong> work together by using three interconnected modules (processes):</p>
+<p>In this section, we'll build a <strong>Nextflow pipeline</strong> integrating <strong>Freyja</strong> commands from the previous section. We'll demonstrate how <strong>processes, channels, and operators</strong> work together by using two interconnected modules (processes):</p>
 <ol>
-<li><strong>Preprocessing Module</strong> – Uses <code>freyja variants</code> to extract variant and depth files.  </li>
-<li><strong>Freyja Analysis Module</strong> – Runs <code>freyja demix</code> on the processed data to generate variant analysis results.  </li>
-<li><strong>Co-variants Analysis Module</strong> – Uses <code>freyja covariants</code> to identify co-occurring mutations.  </li>
+<li><strong>Variant Extraction Module</strong> – Uses <code>freyja variants</code> to identify genetic variants in a sample and generate sequencing depth information from a <code>.BAM</code> file.  </li>
+<li><strong>Lineage Analysis Module</strong> – Uses <code>freyja demix</code> to analyze the variant and depth data, estimating the relative abundance of different viral lineages.</li>
 </ol>
 <hr />
 <h2 id="project-structure"><strong>Project Structure</strong></h2>
@@ -807,10 +806,12 @@
 |-- modules/
 |   ├── freyja_variants.nf 
 |   ├── freyja_demax.nf 
-|   ├── freyja_covariants.nf 
 │-- data/
-│   ├── samples.csv
-│   ├── ban_files/
+│   ├── ref_genome.fasta
+│   ├── bam_files/
+│   │   ├── sample1.bam
+│   │   ├── sample2.bam
+│   │   ├── sample3.bam
 </code></pre></div></p>
 <p>Breaking it Down:</p>
 <ol>
@@ -820,15 +821,18 @@
 <li><code>modules</code> - A folder containing small, reusable nextflow scripts (modules) that handle different tasks in the pipeline.<ul>
 <li><code>freyja_variants.nf</code> - Runs freyja variants to extract variant and depth information from BAM files.</li>
 <li><code>freyja_demax.nf</code> - Runs freyja demix to estimate lineage abundances.</li>
-<li><code>freyja_covariants.nf</code> - Runs freyja covariants to identify co-occurring mutations.</li>
 </ul>
 </li>
 <li><code>data/</code> – This folder holds input files needed for the pipeline, such as sequencing data and sample information.<ul>
-<li><code>samples.csv</code> – A file listing sample names and paths to sequencing files.</li>
+<li><code>ref_genome.fasta</code> – A reference genome file that serves as a guide for analyzing sequencing data.</li>
 <li><code>bam_files/</code> – A directory containing BAM files, which store aligned sequencing reads.</li>
 </ul>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each <code>.BAM</code> in the <code>bam_file</code> folder represents a different sample</p>
+</div>
 <hr />
 
 
