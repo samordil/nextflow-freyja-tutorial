@@ -369,6 +369,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conda-install-biocondanextflow-conda-install-biocondafreyja" class="md-nav__link">
+    <span class="md-ellipsis">
+      conda install bioconda::nextflow conda install bioconda::freyja
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -499,6 +508,28 @@
   
   <span class="md-ellipsis">
     Operators
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    workflows
     
   </span>
   
@@ -746,6 +777,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conda-install-biocondanextflow-conda-install-biocondafreyja" class="md-nav__link">
+    <span class="md-ellipsis">
+      conda install bioconda::nextflow conda install bioconda::freyja
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -772,34 +812,34 @@
 <hr />
 <h2 id="installing-nextflow"><strong>Installing Nextflow</strong></h2>
 <p>Nextflow requires <strong>Java 8+</strong> and can be installed using the following command:</p>
-<pre><code class="language-bash">curl -s https://get.nextflow.io | bash
-chmod +x nextflow
-sudo mv nextflow /usr/local/bin
-</code></pre>
-<p>To verify installation, run:</p>
-<pre><code class="language-bash">nextflow -version
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>https://get.nextflow.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+chmod<span class="w"> </span>+x<span class="w"> </span>nextflow
+sudo<span class="w"> </span>mv<span class="w"> </span>nextflow<span class="w"> </span>/usr/local/bin
+</code></pre></div>
+<p>To verify installation, run:
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>-version
+</code></pre></div></p>
 <hr />
 <h2 id="installing-freyja"><strong>Installing Freyja</strong></h2>
 <p>Freyja requires Python 3 and can be installed via pip:</p>
-<pre><code class="language-bash">pip install freyja
-</code></pre>
-<p>To check if Freyja is installed correctly run:</p>
-<pre><code class="language-bash">freyja --help
-</code></pre>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>freyja
+</code></pre></div>
+<p>To check if Freyja is installed correctly run:
+<div class="highlight"><pre><span></span><code>freyja<span class="w"> </span>--help
+</code></pre></div></p>
 <hr />
 <h2 id="alternative-installation-via-conda"><strong>Alternative installation via conda</strong></h2>
 <p>If you prefer using Conda, first ensure it is installed. If not, follow the official installation <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">guide</a>. </p>
 <p>Once Conda is set up, create a new environment named training-tutorial with Python by running:</p>
-<pre><code class="language-bash">conda create -n training-tutorial python=3.9
-</code></pre>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>training-tutorial<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+</code></pre></div>
 <p>Activate the environment:</p>
-<pre><code class="language-bash">conda activate training-tutorial
-</code></pre>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>training-tutorial
+</code></pre></div>
 <p>Now, install Nextflow and Freyja using conda:</p>
-<pre><code class="language-bash">conda install bioconda::nextflow
-conda install bioconda::freyja
-</code></pre>
+<h2 id="conda-install-biocondanextflow-conda-install-biocondafreyja"><div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>bioconda::nextflow
+conda<span class="w"> </span>install<span class="w"> </span>bioconda::freyja
+</code></pre></div></h2>
 
 
 

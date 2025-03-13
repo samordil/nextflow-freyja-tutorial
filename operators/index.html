@@ -12,7 +12,7 @@
         <link rel="prev" href="../processes/">
       
       
-        <link rel="next" href="../freyja_basics/">
+        <link rel="next" href="../workflows/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -284,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../environment_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,6 +513,28 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    workflows
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -825,39 +847,44 @@ They help modify, filter, and combine data before passing it to a process.  </p>
 <hr />
 <h2 id="example-1-using-map-to-transform-data"><strong>Example 1</strong>: Using <code>map</code> to transform data</h2>
 <p>The <strong><code>map</code></strong> operator applies a function to every element in a channel.  </p>
-<pre><code class="language-nextflow">Channel.from(&quot;sample1.txt&quot;, &quot;sample2.txt&quot;, &quot;sample3.txt&quot;)
+<p><div class="highlight"><pre><span></span><code>Channel.from(&quot;sample1.txt&quot;, &quot;sample2.txt&quot;, &quot;sample3.txt&quot;)
     | map { it.toUpperCase() }
     | view()
-</code></pre>
-<p>Output:</p>
-<pre><code>SAMPLE1.TXT  
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>SAMPLE1.TXT  
 SAMPLE2.TXT  
 SAMPLE3.TXT  
-</code></pre>
+</code></pre></div></p>
 <hr />
 <h2 id="example-2-using-filter-to-select-data"><strong>Example 2</strong>: Using <code>filter</code> to select data</h2>
-<p>The <code>filter</code> operator removes unwanted elements based on a condition.</p>
-<pre><code class="language-nextflow">Channel.from(&quot;data1.txt&quot;, &quot;image.png&quot;, &quot;data2.txt&quot;)
-    | filter { it.endsWith('.txt') }
+<p>The <code>filter</code> operator removes unwanted elements based on a condition.
+<div class="highlight"><pre><span></span><code>Channel.from(&quot;data1.txt&quot;, &quot;image.png&quot;, &quot;data2.txt&quot;)
+    | filter { it.endsWith(&#39;.txt&#39;) }
     | view()
-</code></pre>
-<p>Output:</p>
-<pre><code>data1.txt  
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>data1.txt  
 data2.txt  
-
-</code></pre>
+</code></pre></div></p>
 <hr />
 <h2 id="example-3-using-grouptuple-to-organize-data"><strong>Example 3</strong>: Using <code>groupTuple</code> to Organize Data</h2>
-<p>The <code>groupTuple</code> operator groups elements into structured tuples.</p>
-<pre><code class="language-nextflow">Channel.from([&quot;A&quot;, &quot;B&quot;, &quot;C&quot;], [1, 2, 3])
+<p>The <code>groupTuple</code> operator groups elements into structured tuples.
+<div class="highlight"><pre><span></span><code>Channel.from([&quot;A&quot;, &quot;B&quot;, &quot;C&quot;], [1, 2, 3])
     | groupTuple()
     | view()
-</code></pre>
-<p>Output:</p>
-<pre><code>[A, 1]  
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>[A, 1]  
 [B, 2]  
 [C, 3]  
-</code></pre>
+</code></pre></div></p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Nextflow, you can connect channels and operators using the <a href="https://www.nextflow.io/docs/latest/workflow.html#pipe">pipe (<code>|</code>)</a> symbol.<br />
+The <a href="https://www.nextflow.io/docs/latest/reference/operator.html#view"><code>view</code></a> operator is one example of an operator that processes and displays data in a pipeline.</p>
+</div>
 <hr />
 
 
@@ -905,13 +932,13 @@ data2.txt
         
         
           
-          <a href="../freyja_basics/" class="md-footer__link md-footer__link--next" aria-label="Next: Freyja Basics">
+          <a href="../workflows/" class="md-footer__link md-footer__link--next" aria-label="Next: workflows">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Freyja Basics
+                workflows
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../setup/">
+        <link rel="prev" href="../environment_setup/">
       
       
         <link rel="next" href="../channels/">
@@ -284,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../environment_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,6 +529,28 @@
   
   <span class="md-ellipsis">
     Operators
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    workflows
     
   </span>
   
@@ -836,7 +858,7 @@
 <h2 id="nextflow-script-basics"><strong>Nextflow script basics</strong></h2>
 <p>A Nextflow pipeline is written in <strong>nextflow DSL2 (Domain-Specific Language 2)</strong>. Let's look at a simple example:</p>
 <h3 id="example-hello-world-in-nextflow"><strong>Example: Hello World in Nextflow</strong></h3>
-<pre><code class="language-nextflow">#!/usr/bin/env nextflow     
+<div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow     
 
 nextflow.enable.dsl=2
 
@@ -853,7 +875,7 @@ process sayHello {
 workflow {
     sayHello()
 }
-</code></pre>
+</code></pre></div>
 <h3 id="breaking-it-down"><strong>Breaking it down:</strong></h3>
 <ul>
 <li><strong><code>#!/usr/bin/env nextflow</code></strong><br />
@@ -865,28 +887,30 @@ Enables <strong>Nextflow DSL2</strong>, which is the latest and most flexible ve
 <li><strong>Defining a process (<code>process sayHello { ... }</code>)</strong><br />
 A process is a unit of execution. In this case, it runs a small shell command.<br />
 <br></li>
-<li>The <strong>script section</strong> contains the actual command:</li>
-</ul>
-<pre><code class="language-bash">echo &quot;Hello, Nextflow!&quot;
-</code></pre>
-<ul>
-<li><strong>Output section (<code>output: stdout</code>)</strong><br />
+<li>
+<p>The <strong>script section</strong> contains the actual command:
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, Nextflow!&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Output section (<code>output: stdout</code>)</strong><br />
 Captures the <strong>output of the process</strong>, in this case, the text "Hello, Nextflow!".<br />
-<br></li>
+<br></p>
+</li>
 <li><strong>Defining a workflow (<code>workflow { sayHello() }</code>)</strong><br />
     The <strong>workflow</strong> section calls the <code>sayHello</code> process. In larger pipelines, this is where you define how different processes connect.  </li>
 </ul>
 <hr />
 <h2 id="running-your-first-nextflow-script"><strong>Running your first nextflow script</strong></h2>
 <p>Save this script as <strong><code>hello.nf</code></strong> and run it with:</p>
-<pre><code class="language-bash">nextflow run hello.nf
-</code></pre>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>hello.nf
+</code></pre></div>
 <h3 id="expected-output"><strong>Expected Output</strong></h3>
 <p>If everything is set up correctly, you should see something like this:</p>
-<pre><code class="language-bash">N E X T F L O W  ~  version X.X.X
-Launching `hello.nf` [random_id] - revision X.X.X
-Hello, Nextflow!
-</code></pre>
+<div class="highlight"><pre><span></span><code>N<span class="w"> </span>E<span class="w"> </span>X<span class="w"> </span>T<span class="w"> </span>F<span class="w"> </span>L<span class="w"> </span>O<span class="w"> </span>W<span class="w">  </span>~<span class="w">  </span>version<span class="w"> </span>X.X.X
+Launching<span class="w"> </span><span class="sb">`</span>hello.nf<span class="sb">`</span><span class="w"> </span><span class="o">[</span>random_id<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>revision<span class="w"> </span>X.X.X
+Hello,<span class="w"> </span>Nextflow!
+</code></pre></div>
 <p>This confirms that <strong>Nextflow is installed and working correctly!</strong></p>
 <hr />
 
@@ -918,7 +942,7 @@ Hello, Nextflow!
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Local installation">
+          <a href="../environment_setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Local installation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
