@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../channels/">
+        <link rel="prev" href="../operators/">
       
-      
-        <link rel="next" href="../operators/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Processes - Nextflow & Freyja Tutorial</title>
+        <title>Freyja Basics - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-processes-in-nextflow" class="md-skip">
+        <a href="#introduction-to-freyja" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Processes
+              Freyja Basics
             
           </span>
         </div>
@@ -310,19 +308,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +333,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nextflow Basics
@@ -392,31 +388,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Processes
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -426,59 +401,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-are-processes" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Are Processes?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-structure-of-a-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic structure of a process
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic structure of a process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-1-a-simple-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 1: A simple process
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -517,10 +439,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../freyja_basics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Freyja Basics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -530,6 +473,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-freyja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Freyja?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-freyja-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Freyja Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-freyja-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Freyja Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Freyja Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-freyja-variants-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running freyja variants command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-freyja-demix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running freyja demix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -708,28 +722,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-processes" class="md-nav__link">
+  <a href="#why-use-freyja" class="md-nav__link">
     <span class="md-ellipsis">
-      What Are Processes?
+      Why Use Freyja?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-structure-of-a-process" class="md-nav__link">
+  <a href="#understanding-freyja-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic structure of a process
+      Understanding Freyja Commands
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Basic structure of a process">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-freyja-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Freyja Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Freyja Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-a-simple-process" class="md-nav__link">
+  <a href="#running-freyja-variants-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: A simple process
+      Running freyja variants command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-freyja-demix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running freyja demix
     </span>
   </a>
   
@@ -756,59 +788,74 @@
 
 
 
-<h1 id="understanding-processes-in-nextflow">Understanding Processes in Nextflow</h1>
-<h2 id="what-are-processes">What Are Processes?</h2>
-<p>A <a href="https://www.nextflow.io/docs/latest/process.html"><strong>process</strong></a> in Nextflow is a <strong>unit of execution</strong> that:</p>
+<h1 id="introduction-to-freyja"><strong>Introduction to Freyja</strong></h1>
+<p><a href="https://andersen-lab.github.io/Freyja/index.html#">Freyja</a> is a tool for <strong>analyzing SARS-CoV-2 sequencing data</strong>. It helps identify <strong>viral lineages</strong> and estimate their <strong>relative abundances</strong> by processing variant data from sequencing reads. It is typically used after primer trimming and variant calling.</p>
+<h2 id="why-use-freyja"><strong>Why Use Freyja?</strong></h2>
 <ul>
-<li>Runs a specific command or script.  </li>
-<li>Takes input from a <strong>channel</strong>.  </li>
-<li>Produces an output, which is <strong>sent to a new channel</strong>.  </li>
+<li><strong>Accurate Variant Analysis</strong> – Identifies SARS-CoV-2 variants in sequencing data.  </li>
+<li><strong>Computationally Efficient</strong> – Fast processing of large sequencing datasets.  </li>
+<li><strong>Integrates with Nextflow</strong> – Can be automated in bioinformatics pipelines.  </li>
 </ul>
-<p>Processes are <strong>isolated</strong> from each other, often run in <strong>parallel</strong> and communicate only through <strong>channels</strong>.</p>
 <hr />
-<h2 id="basic-structure-of-a-process">Basic structure of a process</h2>
-<p>A <strong>process</strong> follows this structure:  </p>
-<pre><code class="language-nextflow">process NAME {
-    input:
-    &lt;input definition&gt; // input variable
-
-    output:
-    &lt;output definition&gt; // output variable
-
-    script:
-    &quot;&quot;&quot;
-    &lt;commands to execute&gt;
-    &quot;&quot;&quot;
-}
+<h2 id="understanding-freyja-commands"><strong>Understanding Freyja Commands</strong></h2>
+<p>Freyja provides several commands for analyzing sequencing data. In this tutorial, we will focus on three key commands:</p>
+<ul>
+<li><code>freyja variants</code> – Extracts variant and depth information from sequencing data.</li>
+<li><code>freyja demix</code> – Estimates the relative abundances of viral lineages.</li>
+<li><code>freyja covariants</code> – Identifies co-occurring mutations in the dataset.
+These commands form the foundation of the Nextflow pipeline we will build in the next section.</li>
+</ul>
+<hr />
+<h2 id="running-freyja-commands"><strong>Running Freyja Commands</strong></h2>
+<p>Now that we understand the key Freyja commands, let's see how they are executed.</p>
+<h3 id="running-freyja-variants-command">Running <strong><code>freyja variants</code></strong> command</h3>
+<p>This command extracts variant and depth information from a sequencing dataset.</p>
+<pre><code class="language-bash">freyja variants input_file.bam \
+  --variants sra_accession.tsv \
+  --depths sra_accession.depths \
+  --ref reference.fasta
 </code></pre>
-<hr />
-<p>Each process has: </p>
+<p>Breakdown:</p>
 <ul>
-<li>A <strong>NAME</strong> - name of the process</li>
-<li>An <strong>Input</strong> – data coming from a <strong>channel</strong>.  </li>
-<li><strong>Execution Block</strong> – Runs the given script/command.  </li>
-<li><strong>Output</strong> – Sent data to an <strong>output channel</strong>.  </li>
+<li><strong><em>input_file.bam</em></strong> – Input BAM file containing aligned sequencing reads.</li>
+<li><code>--variants</code> <strong><em>sra_accession.tsv</em></strong> – Output file storing variant information.</li>
+<li><code>--depths</code> <strong><em>sra_accession.depths</em></strong> – Output file storing sequencing depth information.</li>
+<li><code>--ref</code> <strong><em>reference.fasta</em></strong> – input Reference genome file to align against.</li>
 </ul>
 <hr />
-<h3 id="example-1-a-simple-process"><strong>Example 1</strong>: A simple process</h3>
-<pre><code class="language-nextflow">process countBases {
-    input:
-    path sample_file
-
-    output:
-    path &quot;output_file.count&quot;
-
-    script:
-    &quot;&quot;&quot;
-    wc -c $sample_file &gt; output_file.count
-    &quot;&quot;&quot;
-}
+<h3 id="running-freyja-demix">Running <strong><code>freyja demix</code></strong></h3>
+<p>Once we have the variant and depth files, we can estimate lineage abundances.</p>
+<pre><code class="language-bash">freyja demix variants_file depths_file \
+  --eps params.eps \
+  --output sample_id.demix.tsv \
+  --barcodes barcodes_file
 </code></pre>
-<p>Here:</p>
+<p>Breakdown:</p>
 <ul>
-<li>The process <code>countBases</code> defines a variable called <code>samples_file</code>, which holds the path to a file received through a <code>queue channel</code>.</li>
-<li>It then executes the <code>wc -c</code> command in the <code>script</code> section to generate the <code>output_file.count</code> that is made available through another channel.</li>
+<li><strong><em>variants_file</em></strong> – Input variant file from freyja variants.</li>
+<li><strong><em>depths_file</em></strong> – Input depth file from freyja variants.</li>
+<li><code>--eps</code> <strong><em>params.eps</em></strong> – Error parameter to refine lineage estimates.</li>
+<li><code>--output</code> <strong><em>sample_id.demix.tsv</em></strong> – Output file storing lineage proportions.</li>
+<li><code>--barcodes</code> <strong><em>barcodes_file</em></strong> – Barcode file used to match variants to lineages.</li>
 </ul>
+<hr />
+<p>Running freyja covariants
+This command identifies co-occurring mutations in the dataset.</p>
+<pre><code class="language-bash">freyja covariants input_file.bam num_min_site num_max_site \
+  --ref-genome ref_genome.fasta \
+  --output sra_accession.covariants.tsv \
+  --annot annotation_file
+</code></pre>
+<p>Breakdown:</p>
+<ul>
+<li><strong><em>${input_bam}</em></strong> – Input BAM file with aligned sequencing data.</li>
+<li><strong><em>min_site_num</em></strong> and <strong><em>max_site_num</em></strong> – Genomic region to analyze.</li>
+<li><code>--ref-genome</code> <strong><em>ref_genome.fasta</em></strong> – Reference genome for alignment.</li>
+<li><code>--output</code> <strong><em>sra_accession.covariants.tsv</em></strong> – Output file with co-occurring mutations.</li>
+<li><code>--annot</code> <strong><em>annotation_file</em></strong> – Annotation file to interpret results.</li>
+</ul>
+<hr />
+<p>Now that we've covered Freyja’s essential commands, we’re ready to integrate them into a nextflow pipeline!</p>
 <hr />
 
 
@@ -839,7 +886,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../channels/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Channels">
+          <a href="../operators/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Operators">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -849,27 +896,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Channels
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../operators/" class="md-footer__link md-footer__link--next" aria-label="Next: Operators">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
                 Operators
               </div>
             </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     
