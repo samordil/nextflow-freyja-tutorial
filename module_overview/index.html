@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../processes/">
+        <link rel="prev" href="../project_setup/">
       
       
-        <link rel="next" href="../workflows/">
+        <link rel="next" href="../variant/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Operators - Nextflow & Freyja Tutorial</title>
+        <title>Modules Overview - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-operators-in-nextflow" class="md-skip">
+        <a href="#writing-nextflow-modules-for-freyja" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operators
+              Modules Overview
             
           </span>
         </div>
@@ -310,19 +310,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nextflow Basics
@@ -414,31 +412,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Operators
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../operators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,71 +425,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-are-operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Are Operators?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commonly-used-operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commonly Used Operators
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-1-using-map-to-transform-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 1: Using map to transform data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2-using-filter-to-select-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 2: Using filter to select data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-3-using-grouptuple-to-organize-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 3: Using groupTuple to Organize Data
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -572,17 +484,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -597,7 +511,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Building Nextflow Pipeline
@@ -652,17 +566,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -677,7 +593,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Creating Modules
@@ -688,10 +604,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../module_overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modules Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -701,6 +638,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Module?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-nextflow-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Nextflow Modules
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -918,45 +902,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-operators" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What Are Operators?
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#commonly-used-operators" class="md-nav__link">
+  <a href="#what-is-a-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Commonly Used Operators
+      What is a Module?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-1-using-map-to-transform-data" class="md-nav__link">
+  <a href="#creating-nextflow-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Using map to transform data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2-using-filter-to-select-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 2: Using filter to select data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-3-using-grouptuple-to-organize-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 3: Using groupTuple to Organize Data
+      Creating Nextflow Modules
     </span>
   </a>
   
@@ -978,88 +944,31 @@
 
 
 
-<h1 id="understanding-operators-in-nextflow"><strong>Understanding Operators in Nextflow</strong></h1>
-<h2 id="what-are-operators"><strong>What Are Operators?</strong></h2>
-<p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#operators"><strong>Operators</strong></a> in Nextflow allow you to <strong>manipulate</strong> and <strong>transform</strong> data as it flows through channels.
-They help modify, filter, and combine data before passing it to a process.  </p>
+<h1 id="writing-nextflow-modules-for-freyja"><strong>Writing Nextflow Modules for Freyja</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>Now that we have created <strong>Nextflow processes</strong>, it's time to organize them using <strong>modules</strong>.  </p>
+<h2 id="what-is-a-module"><strong>What is a Module?</strong></h2>
+<p>A <strong>module</strong> in Nextflow is simply a <strong>separate file</strong> that contains a <strong>process</strong>.<br />
+This makes the pipeline <strong>organized</strong> and allows us to <strong>reuse</strong> processes easily.  </p>
+<p>For example:<br />
+Instead of writing a long <code>main.nf</code> script, we put each <strong>process in its own module</strong>.<br />
+This helps keep the pipeline <strong>clean</strong> and <strong>modular</strong>.  </p>
 <hr />
-<h2 id="commonly-used-operators"><strong>Commonly Used Operators</strong></h2>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>map</code></td>
-<td>Transforms each element in a channel</td>
-<td>Convert file names to uppercase</td>
-</tr>
-<tr>
-<td><code>filter</code></td>
-<td>Selects elements that match a condition</td>
-<td>Keep only <code>.txt</code> files</td>
-</tr>
-<tr>
-<td><code>collect</code></td>
-<td>Gathers all elements into a single list</td>
-<td>Collect all sample names</td>
-</tr>
-<tr>
-<td><code>flatten</code></td>
-<td>Flattens nested lists into a single list</td>
-<td>Convert list of lists into one</td>
-</tr>
-<tr>
-<td><code>groupTuple</code></td>
-<td>Groups data into pairs</td>
-<td>Pair samples with metadata</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="example-1-using-map-to-transform-data"><strong>Example 1</strong>: Using <code>map</code> to transform data</h2>
-<p>The <strong><code>map</code></strong> operator applies a function to every element in a channel.  </p>
-<p><div class="highlight"><pre><span></span><code>Channel.from(&quot;sample1.txt&quot;, &quot;sample2.txt&quot;, &quot;sample3.txt&quot;)
-    | map { it.toUpperCase() }
-    | view()
-</code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>SAMPLE1.TXT  
-SAMPLE2.TXT  
-SAMPLE3.TXT  
+<h2 id="creating-nextflow-modules"><strong>Creating Nextflow Modules</strong></h2>
+<p>We will create <strong>two modules</strong>, each containing one Nextflow process:</p>
+<ol>
+<li><strong><code>freyja_variants.nf</code> Module</strong> – Contains the <code>FREYJA_VARIANTS</code> process, which extracts sequencing depth and variant data from a <code>.BAM</code> file.  </li>
+<li><strong><code>freyja_demix.nf</code> Module</strong> – Contains the <code>FREYJA_DEMIX</code> process, which estimates the relative abundance of viral lineages from the extracted data.  </li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Naming Nextflow Processes</strong>  </p>
+<p>It's <strong>common practice</strong> (but not mandatory) to name Nextflow processes in <strong>capital letters</strong> and include the tool's name.  </p>
+<p>This improves <strong>readability</strong> and makes it <strong>easier to understand</strong> what each process does.  </p>
+<p>Example:<br />
+<div class="highlight"><pre><span></span><code>process FREYJA_VARIANTS { ... }  // Runs freyja variants  
+process FREYJA_DEMIX { ... }     // Runs freyja demix  
 </code></pre></div></p>
-<hr />
-<h2 id="example-2-using-filter-to-select-data"><strong>Example 2</strong>: Using <code>filter</code> to select data</h2>
-<p>The <code>filter</code> operator removes unwanted elements based on a condition.
-<div class="highlight"><pre><span></span><code>Channel.from(&quot;data1.txt&quot;, &quot;image.png&quot;, &quot;data2.txt&quot;)
-    | filter { it.endsWith(&#39;.txt&#39;) }
-    | view()
-</code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>data1.txt  
-data2.txt  
-</code></pre></div></p>
-<hr />
-<h2 id="example-3-using-grouptuple-to-organize-data"><strong>Example 3</strong>: Using <code>groupTuple</code> to Organize Data</h2>
-<p>The <code>groupTuple</code> operator groups elements into structured tuples.
-<div class="highlight"><pre><span></span><code>Channel.from([&quot;A&quot;, &quot;B&quot;, &quot;C&quot;], [1, 2, 3])
-    | groupTuple()
-    | view()
-</code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>[A, 1]  
-[B, 2]  
-[C, 3]  
-</code></pre></div></p>
-<hr />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In Nextflow, you can connect channels and operators using the <a href="https://www.nextflow.io/docs/latest/workflow.html#pipe">pipe (<code>|</code>)</a> symbol.<br />
-The <a href="https://www.nextflow.io/docs/latest/reference/operator.html#view"><code>view</code></a> operator is one example of an operator that processes and displays data in a pipeline.</p>
 </div>
 <hr />
 
@@ -1091,7 +1000,7 @@ The <a href="https://www.nextflow.io/docs/latest/reference/operator.html#view"><
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Processes">
+          <a href="../project_setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Project Setup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1101,20 +1010,20 @@ The <a href="https://www.nextflow.io/docs/latest/reference/operator.html#view"><
                 Previous
               </span>
               <div class="md-ellipsis">
-                Processes
+                Project Setup
               </div>
             </div>
           </a>
         
         
           
-          <a href="../workflows/" class="md-footer__link md-footer__link--next" aria-label="Next: Workflows">
+          <a href="../variant/" class="md-footer__link md-footer__link--next" aria-label="Next: Variant module">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Workflows
+                Variant module
               </div>
             </div>
             <div class="md-footer__button md-icon">
