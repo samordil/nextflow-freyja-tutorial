@@ -25,18 +25,21 @@ theme:
 nav:
   - Home: index.md
   - Environment setup:
-    - Local installation: environment_setup.md
+      - Local installation: environment_setup.md
   - Nextflow Basics: 
-    - Overview: nextflow_overview.md
-    - Channels: channels.md
-    - Processes: processes.md
-    - Operators: operators.md
-    - workflows: workflows.md
+      - Overview: nextflow_overview.md
+      - Channels: channels.md
+      - Processes: processes.md
+      - Operators: operators.md
+      - Workflows: workflows.md
   - Freyja Basics: freyja_basics.md
-  - Building nexflow pipeline:
-    - Overview: pipeline_overview.md
-    - Project setup: project_setup.md
-    - Creating modules: modules.md 
+  - Building Nextflow Pipeline:
+      - Overview: pipeline_overview.md
+      - Project Setup: project_setup.md
+      - Creating Modules:
+          - Modules Overview: module_overview.md
+          - Variant module : variant.md
+          - Demix Module: demix.md
   - Customizing Parameters: customizing_parameters.md
   - Handling Multiple Samples: handling_multiple_samples.md
   - Parallel Execution: parallel_execution.md

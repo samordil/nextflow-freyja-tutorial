@@ -31,7 +31,7 @@ Breaking it Down:
 1.  `training/` - Root directory that contains all the files and folders for the Nextflow pipeline.
 2.  `main.nf` – The main script that defines how the pipeline runs. It connects different steps and manages data flow.
 3.  `nextflow.config` – A settings file where we define parameters like memory, CPU usage, and other execution settings.
-4.  `modules` - A folder containing small, reusable nextflow scripts (modules) that handle different tasks in the pipeline.
+4.  `modules` - A folder containing small, reusable nextflow scripts that handle different tasks in the pipeline.
     - `freyja_variants.nf` - Runs freyja variants to extract variant and depth information from BAM files.
     - `freyja_demax.nf` - Runs freyja demix to estimate lineage abundances.
 5.  `data/` – This folder holds input files needed for the pipeline, such as sequencing data and sample information.

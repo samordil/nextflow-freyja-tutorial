@@ -458,16 +458,7 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-name-input-input-definition-input-variable-output-output-definition-output-variable-script-commands-to-execute" class="md-nav__link">
-    <span class="md-ellipsis">
-      process NAME { input: &lt;input definition&gt; // input variable output: &lt;output definition&gt; // output variable script: &quot;&quot;&quot; &lt;commands to execute&gt; &quot;&quot;&quot; }
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="process NAME { input: &lt;input definition&gt; // input variable output: &lt;output definition&gt; // output variable script: &#34;&#34;&#34; &lt;commands to execute&gt; &#34;&#34;&#34; }">
+    <nav class="md-nav" aria-label="Basic structure of a process">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -526,7 +517,7 @@
         
   
   <span class="md-ellipsis">
-    workflows
+    Workflows
     
   </span>
   
@@ -586,7 +577,7 @@
             
   
   <span class="md-ellipsis">
-    Building nexflow pipeline
+    Building Nextflow Pipeline
     
   </span>
   
@@ -597,7 +588,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Building nexflow pipeline
+            Building Nextflow Pipeline
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -634,12 +625,122 @@
         
   
   <span class="md-ellipsis">
-    Project setup
+    Project Setup
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Creating Modules
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Creating Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variant module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demix Module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -820,16 +921,7 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-name-input-input-definition-input-variable-output-output-definition-output-variable-script-commands-to-execute" class="md-nav__link">
-    <span class="md-ellipsis">
-      process NAME { input: &lt;input definition&gt; // input variable output: &lt;output definition&gt; // output variable script: &quot;&quot;&quot; &lt;commands to execute&gt; &quot;&quot;&quot; }
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="process NAME { input: &lt;input definition&gt; // input variable output: &lt;output definition&gt; // output variable script: &#34;&#34;&#34; &lt;commands to execute&gt; &#34;&#34;&#34; }">
+    <nav class="md-nav" aria-label="Basic structure of a process">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -874,7 +966,7 @@
 <hr />
 <h2 id="basic-structure-of-a-process">Basic structure of a process</h2>
 <p>A <strong>process</strong> follows this structure:  </p>
-<h2 id="process-name-input-input-definition-input-variable-output-output-definition-output-variable-script-commands-to-execute"><div class="highlight"><pre><span></span><code>process NAME {
+<div class="highlight"><pre><span></span><code>process NAME {
     input:
     &lt;input definition&gt; // input variable
 
@@ -886,7 +978,8 @@
     &lt;commands to execute&gt;
     &quot;&quot;&quot;
 }
-</code></pre></div></h2>
+</code></pre></div>
+<hr />
 <p>Each process has: </p>
 <ul>
 <li>A <strong>NAME</strong> - name of the process</li>
