@@ -1,0 +1,50 @@
+site_name: "Nextflow & Freyja Tutorial"
+theme:
+  name: material
+  features:
+    - content.code.copy  # Enables the copy button for code blocks
+    - navigation.footer  # Enables Previous & Next buttons
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+
+# navigation list 
+nav:
+  - Home: index.md
+  - Environment setup:
+    - Local installation: environment_setup.md
+  - Nextflow Basics: 
+    - Overview: nextflow_overview.md
+    - Channels: channels.md
+    - Processes: processes.md
+    - Operators: operators.md
+    - workflows: workflows.md
+  - Freyja Basics: freyja_basics.md
+  - Building nexflow pipeline:
+    - Overview: pipeline_overview.md
+    - Project setup: project_setup.md
+    - Creating modules: modules.md 
+  - Customizing Parameters: customizing_parameters.md
+  - Handling Multiple Samples: handling_multiple_samples.md
+  - Parallel Execution: parallel_execution.md
+  - Debugging: debugging_troubleshooting.md
+  - Best Practices: best_practices.md
+  - Containers & Reproducibility: containers_reproducibility.md
+
+markdown_extensions:
+  - admonition             # Enables admonitions like notes, warnings, tips, etc !!! note/warning/tip
+  - pymdownx.details       # Allows collapsible admonitions (click to expand) use ??? e.g ??? tip "click to expand"
+  - pymdownx.superfences   # Enables nested code blocks inside admonitions
