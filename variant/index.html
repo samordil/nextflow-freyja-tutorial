@@ -1010,17 +1010,18 @@
 
 
 
-<h1 id="writing-freyja_variantsnf-module"><strong>Writing freyja_variants.nf Module</strong></h1>
+<h1 id="writing-freyja_variantsnf-module"><strong>Writing <code>freyja_variants.nf</code> Module</strong></h1>
 <h2 id="step-1-writing-the-freyja_variantsnf-module"><strong>Step 1: Writing the <code>freyja_variants.nf</code> Module</strong></h2>
-<p>The <strong><code>freyja_variants.nf</code> module</strong> contains the <code>FREYJA_VARIANTS</code> process. This process will:  </p>
+<p>In this step, we will define the <code>freyja_variants.nf</code> module, which contains the <code>FREYJA_VARIANTS</code> process. This module:</p>
 <ul>
-<li>Take a <strong>.BAM</strong> file and <strong>FASTA</strong> fileS as input.  </li>
-<li>Run <code>freyja variants</code> to extract <strong>variant</strong> and <strong>depth</strong> information.  </li>
-<li>Produce <code>.depths</code> and <code>.variants</code> files as output.  </li>
+<li>Takes a <strong>.BAM</strong> file and a <strong>FASTA</strong> file as input.</li>
+<li>Runs the <code>freyja variants</code> command to extract <strong>variant</strong> and <strong>depth</strong> information.</li>
+<li>Produces <code>.variants</code> and <code>.depths</code> files as output.</li>
 </ul>
-<p>Use your preferred text editor or run:  </p>
+<p>Use your preferred text editor to edit <code>freyja_variants.nf</code> file or run:  </p>
 <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>modules/freyja_variants.nf
 </code></pre></div>
+<hr />
 <p>Here is the full code for the FREYJA_VARIANTS process:</p>
 <div class="highlight"><pre><span></span><code>process FREYJA_VARIANTS {
 
@@ -1029,72 +1030,81 @@
         each path(bam_file)
 
     output:
-        path &quot;${bam_basename}.variant&quot;, emit: variant
+        path &quot;${bam_basename}.variants&quot;, emit: variant
         path &quot;${bam_basename}.depths&quot;, emit: depths
 
     script:
-    bam_basename = bam_file.simpleName
+    bam_basename = bam_file.baseName
 
-        &quot;&quot;&quot;
-        freyja variants $bam_file \
-            --ref $fasta_file \
-            --variants ${bam_basename}.variant \
-            --depths ${bam_basename}.depths
-        &quot;&quot;&quot;
+    &quot;&quot;&quot;
+    freyja variants $bam_file \
+        --ref $fasta_file \
+        --variants ${bam_basename}.variants \
+        --depths ${bam_basename}.depths
+    &quot;&quot;&quot;
 }
 </code></pre></div>
+<hr />
 <h2 id="breaking-it-down-step-by-step"><strong>Breaking it Down step by step</strong></h2>
 <h3 id="process-definition"><strong>Process Definition</strong></h3>
 <p>Every Nextflow process starts with the <code>process</code> keyword, followed by a name (written in uppercase).</p>
 <div class="highlight"><pre><span></span><code>process FREYJA_VARIANTS { }
 </code></pre></div>
 <ul>
-<li>Naming convention: Tool name in uppercase (e.g. <code>FREYJA_VARIANTS</code>).</li>
+<li>Naming convention: The process is named after the tool it runs (FREYJA_VARIANTS).</li>
 <li>The curly braces <code>{}</code> enclose the process logic.</li>
 </ul>
+<hr />
 <h3 id="defining-inputs"><strong>Defining Inputs</strong></h3>
 <p>The input section specifies what files the process needs.</p>
 <div class="highlight"><pre><span></span><code>    input:
-        path bam_file
         path fasta_file
+        each path(bam_file)
 </code></pre></div>
 <ul>
-<li>path each <code>bam_file</code> → The BAM file (aligned sequencing reads). The each keyword ensures that the process runs separately for each BAM file in the input channel.</li>
-<li>path <code>fasta_file</code> → The reference genome.</li>
 <li>These files will be received from a channel.</li>
+<li><code>path fasta_file</code> → The reference genome file (shared across samples).</li>
+<li><code>each path(bam_file)</code> → Represents a BAM file containing aligned sequencing reads.</li>
+<li>The <a href="https://www.nextflow.io/docs/latest/process.html"><code>each</code></a> keyword ensures that the process runs individually for each BAM file using the same reference file.</li>
 </ul>
+<hr />
 <h3 id="defining-outputs"><strong>Defining Outputs</strong></h3>
 <p>The output section declares the files the process will generate.</p>
 <div class="highlight"><pre><span></span><code>    output:
-        path &quot;${variant_file}.variant&quot;
-        path &quot;${depth_file}.depths&quot;
+        path &quot;${bam_basename}.variants&quot;, emit: variant
+        path &quot;${bam_basename}.depths&quot;, emit: depths
 </code></pre></div>
 <ul>
-<li><code>${variant_file}.variant</code> → Stores variant information.</li>
-<li><code>${depth_file}.depths</code> → Stores sequencing depth.</li>
-<li><code>${}</code> syntax allows dynamic filenames based on variable names.</li>
+<li><code>${bam_basename}.variants</code> → Contains detected genetic variants.</li>
+<li><code>${bam_basename}.depths</code> → Stores sequencing depth information.</li>
+<li><a href="https://www.nextflow.io/docs/latest/process.html"><code>emit</code></a> labels (<code>variant</code> and <code>depths</code>) allow other processes to reference these outputs.</li>
 </ul>
+<hr />
 <h3 id="writing-the-command-script-section"><strong>Writing the Command (Script Section)</strong></h3>
 <p>This is where the actual Freyja command is executed.</p>
 <div class="highlight"><pre><span></span><code>    script:
-        &quot;&quot;&quot;
-        freyja variants $bam_file \
-            --ref $fasta_file \
-            --variants ${bam_basename}.variant \
-            --depths ${bam_basename}.depths
-        &quot;&quot;&quot;
+    bam_basename = bam_file.baseName
+
+    &quot;&quot;&quot;
+    freyja variants $bam_file \
+        --ref $fasta_file \
+        --variants ${bam_basename}.variants \
+        --depths ${bam_basename}.depths
+    &quot;&quot;&quot;
 </code></pre></div>
 <ul>
+<li><code>bam_basename</code> = <code>bam_file.simpleName</code> → Extracts the filename (without extension) to create meaningful output names.</li>
 <li><code>$bam_file</code> and <code>$fasta_file</code> → Access input variables.</li>
 <li><code>${variant_file}.variant</code> and <code>${depth_file}.depths</code> → Define output filenames.</li>
 <li>Triple quotes (""") allow multi-line commands for better readability.</li>
 </ul>
+<hr />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To access variables in a process, use <code>$variable_name</code>.<br>
+<p>To access variables in a nextflow process, use <code>$variable_name</code>.<br>
 To add suffixes or prefixes, enclose the variable in <code>{}</code> → <code>${depth_file}.depths</code>.<br></p>
 </div>
-<p>Now save the changes you have made to the <code>freyja_variants.nf</code> module.</p>
+<p>Now, save your changes to the freyja_variants.nf module!</p>
 <hr />
 
 

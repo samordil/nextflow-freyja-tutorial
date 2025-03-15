@@ -979,48 +979,46 @@
 
 
 <h1 id="setting-up-the-project-structure"><strong>Setting Up the Project Structure</strong></h1>
-<p>Before writing our Nextflow pipeline, let's first create the necessary files and directories step by step. This will help us organize our project properly.</p>
+<p>Before running our Nextflow pipeline, let's create the necessary files and directories <strong>step by step</strong>.  </p>
 <hr />
 <h2 id="step-1-create-the-main-project-directory"><strong>Step 1: Create the Main Project Directory</strong></h2>
-<p>First, create a new directory for the pipeline and navigate into it:
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>training<span class="w">  </span>
+<p>First, create a new directory for the pipeline and navigate into it:</p>
+<p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>training<span class="w">  </span>
 <span class="nb">cd</span><span class="w"> </span>training<span class="w">  </span>
 </code></pre></div>
 This will be the root directory where all pipeline files will be stored.</p>
 <hr />
 <h2 id="step-2-create-the-main-pipeline-script"><strong>Step 2: Create the Main Pipeline Script</strong></h2>
-<p>The main.nf file defines how the pipeline runs. Create this file:</p>
-<p><div class="highlight"><pre><span></span><code>touch<span class="w"> </span>main.nf<span class="w">  </span>
+<p>Next, create the <code>main.nf</code> file, which will define the workflow:</p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>main.nf<span class="w">  </span>
 </code></pre></div>
-This script will later contain the workflow definition that connects different processes.</p>
+<p>This script will later contain the workflow definition that links different processes.</p>
+<hr />
 <h2 id="step-3-create-the-configuration-file"><strong>Step 3: Create the Configuration File</strong></h2>
-<p>Next, create nextflow.config, which will store pipeline settings such as memory, CPU usage, and execution options.</p>
+<p>Now, create <code>nextflow.config</code>, which will store pipeline settings such as memory, CPU, and execution options.</p>
 <div class="highlight"><pre><span></span><code>touch<span class="w"> </span>nextflow.config<span class="w">  </span>
 </code></pre></div>
 <hr />
 <h2 id="step-4-create-the-modules-directory"><strong>Step 4: Create the Modules Directory</strong></h2>
-<p>To keep our pipeline organized, we'll use Nextflow modules for different steps. Create a <code>modules/</code> directory and add the necessary files:</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>modules<span class="w">  </span>
+<p>To organize the pipeline, we'll store different steps as Nextflow modules inside a modules/ directory:</p>
+<p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>modules<span class="w">  </span>
 touch<span class="w"> </span>modules/freyja_variants.nf<span class="w">  </span>
 touch<span class="w"> </span>modules/freyja_demix.nf
 </code></pre></div>
-<p>Each of these .nf files will contain a Nextflow process for running Freyja commands.</p>
+Each of these <code>.nf</code> files will contain a Nextflow process for running Freyja commands.</p>
 <hr />
 <h2 id="step-5-set-up-the-data-directory"><strong>Step 5: Set Up the Data Directory</strong></h2>
-<p>Now, let's create a folder for input data and add placeholder files.
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>data<span class="w">  </span>
+<p>Finally, create a data/ folder to store input files:</p>
+<p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>data<span class="w">  </span>
 touch<span class="w"> </span>data/ref_genome.fasta<span class="w">  </span>
-</code></pre></div></p>
-<p>Inside <code>bam_files/</code>, add some sample .BAM files (or copy your actual BAM files here):</p>
+</code></pre></div>
+Inside bam_files/, add some sample <code>.BAM</code> files (or copy real .BAM files here):</p>
 <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>data/bam_files<span class="w">  </span>
 touch<span class="w"> </span>data/bam_files/sample1.bam<span class="w">  </span>
 touch<span class="w"> </span>data/bam_files/sample2.bam<span class="w">  </span>
-touch<span class="w"> </span>data/bam_files/sample3.bam<span class="w">  </span>
+touch<span class="w"> </span>data/bam_files/sample3.bam<span class="w"> </span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you already have a <code>reference genome</code> and <code>.BAM</code> files, copy them into the <code>data/</code> folder instead of creating placeholder files.</p>
-</div>
+<p>Now that we’ve set up the project, let's start writing the Nextflow modules!</p>
 <hr />
 
 
