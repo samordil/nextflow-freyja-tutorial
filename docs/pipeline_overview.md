@@ -1,15 +1,16 @@
 # **Building a Nextflow Pipeline with Freyja**
 
 ## **Overview**
-In this section, we'll build a **Nextflow pipeline** integrating **Freyja** commands from the previous section. We'll demonstrate how **processes, channels, and operators** work together by using two interconnected modules (processes):
+In this section, we'll build a **Nextflow pipeline** that integrates **Freyja** commands. This pipeline will have two key steps:
 
-1.  **Variant Extraction Module** – Uses `freyja variants` to identify genetic variants in a sample and generate sequencing depth information from a `.BAM` file.  
-2.  **Lineage Analysis Module** – Uses `freyja demix` to analyze the variant and depth data, estimating the relative abundance of different viral lineages.
+1. **Variant Extraction** – Uses `freyja variants` command to identify mutations and calculate sequencing depth from `.BAM` files.
+2. **Lineage Analysis** – Uses `freyja demix` command to estimate the relative abundance of viral lineages.
 
 ---
 
-## **Project Structure**
-Here's how our pipeline will be structured:
+## **Pipeline Structure**
+The pipeline follows this directory structure:
+
 ```
 training/
 │-- main.nf
@@ -26,19 +27,16 @@ training/
 
 ```
 
-Breaking it Down:
+### **What Each File Does**
+| File/Folder         | Description |
+|---------------------|-------------|
+| `main.nf`          | Defines the **workflow**, linking different processes. |
+| `nextflow.config`  | Stores **settings** like memory, CPU, and container options. |
+| `modules/`         | Contains **Nextflow modules** for different tasks. |
+| `freyja_variants.nf` | Runs `freyja variants` to extract mutations & depth data. |
+| `freyja_demix.nf` | Runs `freyja demix` to estimate lineage abundances. |
+| `data/`            | Stores input files like `reference genome` and `.BAM` files. |
 
-1.  `training/` - Root directory that contains all the files and folders for the Nextflow pipeline.
-2.  `main.nf` – The main script that defines how the pipeline runs. It connects different steps and manages data flow.
-3.  `nextflow.config` – A settings file where we define parameters like memory, CPU usage, and other execution settings.
-4.  `modules` - A folder containing small, reusable nextflow scripts that handle different tasks in the pipeline.
-    - `freyja_variants.nf` - Runs freyja variants to extract variant and depth information from BAM files.
-    - `freyja_demax.nf` - Runs freyja demix to estimate lineage abundances.
-5.  `data/` – This folder holds input files needed for the pipeline, such as sequencing data and sample information.
-    - `ref_genome.fasta` – A reference genome file that serves as a guide for analyzing sequencing data.
-    - `bam_files/` – A directory containing BAM files, which store aligned sequencing reads.
-
-!!! note
-    Each `.BAM` in the `bam_file` folder represents a different sample
+Now that we understand the pipeline structure, let's set up the project step by step. 
 
 ---

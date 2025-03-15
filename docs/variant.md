@@ -1,18 +1,20 @@
-# **Writing freyja_variants.nf Module**
+# **Writing `freyja_variants.nf` Module**
 
 ## **Step 1: Writing the `freyja_variants.nf` Module**  
 
-The **`freyja_variants.nf` module** contains the `FREYJA_VARIANTS` process. This process will:  
+In this step, we will define the `freyja_variants.nf` module, which contains the `FREYJA_VARIANTS` process. This module:
 
-- Take a **.BAM** file and **FASTA** fileS as input.  
-- Run `freyja variants` to extract **variant** and **depth** information.  
-- Produce `.depths` and `.variants` files as output.  
- 
-Use your preferred text editor or run:  
+- Takes a **.BAM** file and a **FASTA** file as input.
+- Runs the `freyja variants` command to extract **variant** and **depth** information.
+- Produces `.variants` and `.depths` files as output.
+
+Use your preferred text editor to edit `freyja_variants.nf` file or run:  
 
 ```bash
 nano modules/freyja_variants.nf
 ```
+
+---
 
 Here is the full code for the FREYJA_VARIANTS process:
 
@@ -24,20 +26,22 @@ process FREYJA_VARIANTS {
         each path(bam_file)
         
     output:
-        path "${bam_basename}.variant", emit: variant
+        path "${bam_basename}.variants", emit: variant
         path "${bam_basename}.depths", emit: depths
 
     script:
-    bam_basename = bam_file.simpleName
+    bam_basename = bam_file.baseName
 
-        """
-        freyja variants $bam_file \
-            --ref $fasta_file \
-            --variants ${bam_basename}.variant \
-            --depths ${bam_basename}.depths
-        """
+    """
+    freyja variants $bam_file \
+        --ref $fasta_file \
+        --variants ${bam_basename}.variants \
+        --depths ${bam_basename}.depths
+    """
 }
 ```
+
+---
 
 ## **Breaking it Down step by step**
 ### **Process Definition**
@@ -47,56 +51,68 @@ Every Nextflow process starts with the `process` keyword, followed by a name (wr
 process FREYJA_VARIANTS { }
 ```
 
-- Naming convention: Tool name in uppercase (e.g. `FREYJA_VARIANTS`).
+- Naming convention: The process is named after the tool it runs (FREYJA_VARIANTS).
 - The curly braces `{}` enclose the process logic.
+
+---
 
 ### **Defining Inputs**
 The input section specifies what files the process needs.
 
 ```nextflow
     input:
-        path bam_file
         path fasta_file
+        each path(bam_file)
 ```
 
-- path each `bam_file` → The BAM file (aligned sequencing reads). The each keyword ensures that the process runs separately for each BAM file in the input channel.
-- path `fasta_file` → The reference genome.
 - These files will be received from a channel.
+- `path fasta_file` → The reference genome file (shared across samples).
+- `each path(bam_file)` → Represents a BAM file containing aligned sequencing reads.
+- The [`each`](https://www.nextflow.io/docs/latest/process.html) keyword ensures that the process runs individually for each BAM file using the same reference file.
+
+---
 
 ### **Defining Outputs**
 The output section declares the files the process will generate.
 
 ```nextflow
     output:
-        path "${variant_file}.variant"
-        path "${depth_file}.depths"
+        path "${bam_basename}.variants", emit: variant
+        path "${bam_basename}.depths", emit: depths
 ```
 
-- `${variant_file}.variant` → Stores variant information.
-- `${depth_file}.depths` → Stores sequencing depth.
-- `${}` syntax allows dynamic filenames based on variable names.
+- `${bam_basename}.variants` → Contains detected genetic variants.
+- `${bam_basename}.depths` → Stores sequencing depth information.
+- [`emit`](https://www.nextflow.io/docs/latest/process.html) labels (`variant` and `depths`) allow other processes to reference these outputs.
+
+---
 
 ### **Writing the Command (Script Section)**
 This is where the actual Freyja command is executed.
 
 ```nextflow
     script:
-        """
-        freyja variants $bam_file \
-            --ref $fasta_file \
-            --variants ${bam_basename}.variant \
-            --depths ${bam_basename}.depths
-        """
+    bam_basename = bam_file.baseName
+
+    """
+    freyja variants $bam_file \
+        --ref $fasta_file \
+        --variants ${bam_basename}.variants \
+        --depths ${bam_basename}.depths
+    """
 ```
 
+- `bam_basename` = `bam_file.simpleName` → Extracts the filename (without extension) to create meaningful output names.
 - `$bam_file` and `$fasta_file` → Access input variables.
 - `${variant_file}.variant` and `${depth_file}.depths` → Define output filenames.
 - Triple quotes (""") allow multi-line commands for better readability.
 
+---
+
 !!! note
-    To access variables in a process, use `$variable_name`.<br>
+    To access variables in a nextflow process, use `$variable_name`.<br>
     To add suffixes or prefixes, enclose the variable in `{}` → `${depth_file}.depths`.<br>
 
-Now save the changes you have made to the `freyja_variants.nf` module.
+Now, save your changes to the freyja_variants.nf module!
 
 ---

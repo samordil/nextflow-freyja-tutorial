@@ -1,34 +1,53 @@
 # **Writing Nextflow Modules for Freyja**
 
 ## **Overview**
-Now that we have created **Nextflow processes**, it's time to organize them using **modules**.  
+Now that we’ve created **Nextflow processes**, let's organize them using **modules**.  
 
-## **What is a Module?**
+### **What is a Module?**
 A **module** in Nextflow is simply a **separate file** that contains a **process**.  
-This makes the pipeline **organized** and allows us to **reuse** processes easily.  
+Using modules helps to:
 
-For example:  
-Instead of writing a long `main.nf` script, we put each **process in its own module**.  
-This helps keep the pipeline **clean** and **modular**.  
+- **Keep the pipeline organized** – Each process has its own file.  
+- **Improve reusability** – We can use the same process in different workflows.  
+- **Make debugging easier** – If something goes wrong, it's easier to find the issue.  
+
+Instead of putting everything in one big `main.nf` file, we separate each process into its own module.  
 
 ---
 
 ## **Creating Nextflow Modules**
 We will create **two modules**, each containing one Nextflow process:
 
-1. **`freyja_variants.nf` Module** – Contains the `FREYJA_VARIANTS` process, which extracts sequencing depth and variant data from a `.BAM` file.  
-2. **`freyja_demix.nf` Module** – Contains the `FREYJA_DEMIX` process, which estimates the relative abundance of viral lineages from the extracted data.  
+| **Module**                | **Process Name**       | **Function** |
+|---------------------------|-----------------------|--------------|
+| `freyja_variants.nf`      | `FREYJA_VARIANTS`     | Extracts sequencing depth and variant data from a `.BAM` file.  |
+| `freyja_demix.nf`         | `FREYJA_DEMIX`        | Analyzes variants to estimate the relative abundance of viral lineages. |
 
-!!! tip
-    **Naming Nextflow Processes**  
+---
 
-    It's **common practice** (but not mandatory) to name Nextflow processes in **capital letters** and include the tool's name.  
+## **Why Use Separate Module Files?**
+Imagine writing everything inside `main.nf`, it would become messy and hard to manage.  
 
-    This improves **readability** and makes it **easier to understand** what each process does.  
+By separating each process into its own file, we get:
+
+- **Better readability** – Each module handles one specific task.  
+- **Easier maintenance** – If we need to update one process, we modify only that module.  
+- **Reusability** – The same module can be used in different pipelines.
+
+---
+!!! note  
+    **Naming conventions for Nextflow modules** 
+
+    While not mandatory, it's common practice to:  
+    - Name **modules** after the tool they run (e.g., `freyja_variants.nf` for `freyja variants`).  
+    - Use **UPPERCASE** for process names to make them easily recognizable.  
 
     Example:  
-    ```nextflow
-    process FREYJA_VARIANTS { ... }  // Runs freyja variants  
-    process FREYJA_DEMIX { ... }     // Runs freyja demix  
-    ``` 
+    - `freyja_variants.nf` → `FREYJA_VARIANTS`  
+    - `freyja_demix.nf` → `FREYJA_DEMIX`  
+
+    This improves readability and makes it clear what each module does.  
+
+Now that we understand why we use modules, let’s start writing them!  
+
 ---
