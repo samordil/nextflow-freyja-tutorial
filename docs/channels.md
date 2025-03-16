@@ -17,7 +17,7 @@ Channels in Nextflow are one-directional and can be either:
 ---
 
 ## Creating Channels  
-Channels can be created using built-in **factory methods** like ``Channel.of()``, `Channel.from()`, `Channel.fromPath()` and `Channel.value()`.  
+Channels can be created using built-in [**factory methods**](https://www.nextflow.io/docs/latest/channel.html#channel-factories) like ``Channel.of()``, `Channel.from()`, `Channel.fromPath()` and `Channel.value()`.  
 
 ---
 

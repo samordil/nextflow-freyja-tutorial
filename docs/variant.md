@@ -26,7 +26,7 @@ process FREYJA_VARIANTS {
         each path(bam_file)
         
     output:
-        path "${bam_basename}.variants", emit: variant
+        path "${bam_basename}.variants", emit: variants
         path "${bam_basename}.depths", emit: depths
 
     script:
@@ -68,7 +68,7 @@ The input section specifies what files the process needs.
 - These files will be received from a channel.
 - `path fasta_file` → The reference genome file (shared across samples).
 - `each path(bam_file)` → Represents a BAM file containing aligned sequencing reads.
-- The [`each`](https://www.nextflow.io/docs/latest/process.html) keyword ensures that the process runs individually for each BAM file using the same reference file.
+- The [`each`](https://www.nextflow.io/docs/latest/process.html#input-repeaters-each) keyword ensures that the process runs individually for each BAM file using the same reference file.
 
 ---
 
@@ -77,13 +77,13 @@ The output section declares the files the process will generate.
 
 ```nextflow
     output:
-        path "${bam_basename}.variants", emit: variant
+        path "${bam_basename}.variants", emit: variants
         path "${bam_basename}.depths", emit: depths
 ```
 
 - `${bam_basename}.variants` → Contains detected genetic variants.
 - `${bam_basename}.depths` → Stores sequencing depth information.
-- [`emit`](https://www.nextflow.io/docs/latest/process.html) labels (`variant` and `depths`) allow other processes to reference these outputs.
+- [`emit`](https://www.nextflow.io/docs/latest/process.html#naming-outputs) labels (`variants` and `depths`) allow other processes to reference these outputs.
 
 ---
 
@@ -104,7 +104,7 @@ This is where the actual Freyja command is executed.
 
 - `bam_basename` = `bam_file.simpleName` → Extracts the filename (without extension) to create meaningful output names.
 - `$bam_file` and `$fasta_file` → Access input variables.
-- `${variant_file}.variant` and `${depth_file}.depths` → Define output filenames.
+- `${variant_file}.variants` and `${depth_file}.depths` → Define output filenames.
 - Triple quotes (""") allow multi-line commands for better readability.
 
 ---

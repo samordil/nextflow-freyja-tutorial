@@ -38,8 +38,9 @@ nav:
       - Project Setup: project_setup.md
       - Creating Modules:
           - Modules Overview: module_overview.md
-          - Variant module : variant.md
+          - Variant Module : variant.md
           - Demix Module: demix.md
+      - Connecting the Pieces: connect_the_pieces.md
   - Customizing Parameters: customizing_parameters.md
   - Handling Multiple Samples: handling_multiple_samples.md
   - Parallel Execution: parallel_execution.md

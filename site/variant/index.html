@@ -20,7 +20,7 @@
     
     
       
-        <title>Variant module - Nextflow & Freyja Tutorial</title>
+        <title>Variant Module - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Variant module
+              Variant Module
             
           </span>
         </div>
@@ -642,7 +642,7 @@
           
   
   <span class="md-ellipsis">
-    Variant module
+    Variant Module
     
   </span>
   
@@ -654,7 +654,7 @@
         
   
   <span class="md-ellipsis">
-    Variant module
+    Variant Module
     
   </span>
   
@@ -770,6 +770,28 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect_the_pieces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting the Pieces
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1030,7 +1052,7 @@
         each path(bam_file)
 
     output:
-        path &quot;${bam_basename}.variants&quot;, emit: variant
+        path &quot;${bam_basename}.variants&quot;, emit: variants
         path &quot;${bam_basename}.depths&quot;, emit: depths
 
     script:
@@ -1065,19 +1087,19 @@
 <li>These files will be received from a channel.</li>
 <li><code>path fasta_file</code> → The reference genome file (shared across samples).</li>
 <li><code>each path(bam_file)</code> → Represents a BAM file containing aligned sequencing reads.</li>
-<li>The <a href="https://www.nextflow.io/docs/latest/process.html"><code>each</code></a> keyword ensures that the process runs individually for each BAM file using the same reference file.</li>
+<li>The <a href="https://www.nextflow.io/docs/latest/process.html#input-repeaters-each"><code>each</code></a> keyword ensures that the process runs individually for each BAM file using the same reference file.</li>
 </ul>
 <hr />
 <h3 id="defining-outputs"><strong>Defining Outputs</strong></h3>
 <p>The output section declares the files the process will generate.</p>
 <div class="highlight"><pre><span></span><code>    output:
-        path &quot;${bam_basename}.variants&quot;, emit: variant
+        path &quot;${bam_basename}.variants&quot;, emit: variants
         path &quot;${bam_basename}.depths&quot;, emit: depths
 </code></pre></div>
 <ul>
 <li><code>${bam_basename}.variants</code> → Contains detected genetic variants.</li>
 <li><code>${bam_basename}.depths</code> → Stores sequencing depth information.</li>
-<li><a href="https://www.nextflow.io/docs/latest/process.html"><code>emit</code></a> labels (<code>variant</code> and <code>depths</code>) allow other processes to reference these outputs.</li>
+<li><a href="https://www.nextflow.io/docs/latest/process.html#naming-outputs"><code>emit</code></a> labels (<code>variants</code> and <code>depths</code>) allow other processes to reference these outputs.</li>
 </ul>
 <hr />
 <h3 id="writing-the-command-script-section"><strong>Writing the Command (Script Section)</strong></h3>
@@ -1095,7 +1117,7 @@
 <ul>
 <li><code>bam_basename</code> = <code>bam_file.simpleName</code> → Extracts the filename (without extension) to create meaningful output names.</li>
 <li><code>$bam_file</code> and <code>$fasta_file</code> → Access input variables.</li>
-<li><code>${variant_file}.variant</code> and <code>${depth_file}.depths</code> → Define output filenames.</li>
+<li><code>${variant_file}.variants</code> and <code>${depth_file}.depths</code> → Define output filenames.</li>
 <li>Triple quotes (""") allow multi-line commands for better readability.</li>
 </ul>
 <hr />

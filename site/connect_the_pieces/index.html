@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../operators/">
+        <link rel="prev" href="../demix/">
       
-      
-        <link rel="next" href="../freyja_basics/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Workflows - Nextflow & Freyja Tutorial</title>
+        <title>Connecting the Pieces - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-workflows-in-nextflow" class="md-skip">
+        <a href="#connecting-the-pieces-channels-modules-and-workflow" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workflows
+              Connecting the Pieces
             
           </span>
         </div>
@@ -310,19 +308,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +333,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nextflow Basics
@@ -436,31 +432,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Workflows
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,53 +445,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is a Workflow?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-workflows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of Workflows
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entry-workflow-main-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entry Workflow (Main Workflow)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -554,17 +482,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -579,7 +509,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Building Nextflow Pipeline
@@ -744,10 +674,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../connect_the_pieces/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Connecting the Pieces
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -757,6 +708,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-creating-input-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Creating input channels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-importing-the-modules-into-mainnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Importing the Modules into main.nf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-creating-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Creating the Workflow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -922,27 +929,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-workflow" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a Workflow?
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-workflows" class="md-nav__link">
+  <a href="#step-1-creating-input-channels" class="md-nav__link">
     <span class="md-ellipsis">
-      Types of Workflows
+      Step 1: Creating input channels
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entry-workflow-main-workflow" class="md-nav__link">
+  <a href="#step-2-importing-the-modules-into-mainnf" class="md-nav__link">
     <span class="md-ellipsis">
-      Entry Workflow (Main Workflow)
+      Step 2: Importing the Modules into main.nf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-creating-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Creating the Workflow
     </span>
   </a>
   
@@ -964,68 +980,96 @@
 
 
 
-<h1 id="understanding-workflows-in-nextflow"><strong>Understanding Workflows in Nextflow</strong></h1>
-<h2 id="what-is-a-workflow"><strong>What is a Workflow?</strong></h2>
-<p>A <a href="https://www.nextflow.io/docs/latest/workflow.html#workflows"><strong>workflow</strong></a> in Nextflow is like a blueprint that defines how <strong>processes, channels, and operators</strong> interact. It controls the flow of data and execution in your pipeline.</p>
-<p>Workflows help:</p>
+<h1 id="connecting-the-pieces-channels-modules-and-workflow"><strong>Connecting the Pieces: Channels, Modules, and Workflow</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>Now that we’ve created the Nextflow processes (modules) for Freyja, it’s time to bring everything together!<br />
+In this step, we will:  </p>
 <ul>
-<li><strong>Structure pipelines</strong> – Define the execution order of processes.  </li>
-<li><strong>Reuse code</strong> – Use named workflows multiple times.  </li>
-<li><strong>Improve readability</strong> – Keep complex pipelines manageable.  </li>
+<li>Define <strong>channels</strong> to provide input data to our processes.  </li>
+<li>Import the two <strong>modules</strong> (<code>freyja_variants.nf</code> and <code>freyja_demix.nf</code>).  </li>
+<li>Create a <strong>workflow</strong> that runs the processes in the correct order.  </li>
 </ul>
-<hr />
-<h2 id="types-of-workflows"><strong>Types of Workflows</strong></h2>
-<p>There are two types of workflows:  </p>
-<ul>
-<li><strong>Entry Workflow</strong> – The main workflow that runs when you execute the script.  </li>
-<li><strong>Named Workflows</strong> – Workflows that can be reused and called from other workflows.</li>
-</ul>
-<hr />
-<h2 id="entry-workflow-main-workflow"><strong>Entry Workflow (Main Workflow)</strong></h2>
-<p>Every Nextflow script has <strong>one</strong> entry workflow that acts as the starting point of execution.  </p>
-<p><strong>Example:</strong> A simple workflow that adds "world!" to different greetings.  </p>
-<p><div class="highlight"><pre><span></span><code>workflow {
-    Channel.of(&#39;Bonjour&#39;, &#39;Ciao&#39;, &#39;Hello&#39;, &#39;Hola&#39;)
-        | map { v -&gt; &quot;$v world!&quot; }
-        | view
-}
-</code></pre></div>
- How it works:</p>
-<ul>
-<li>A channel is created with greetings.</li>
-<li>The map operator modifies each greeting by adding "world!".</li>
-<li>The view operator prints the output.</li>
-</ul>
-<p>output:
-<div class="highlight"><pre><span></span><code>Bonjour world!
-Ciao world!
-Hello world!
-Hola world!
-</code></pre></div></p>
-<hr />
-<p>Named Workflows (Reusable Workflows)
-A named workflow is a reusable workflow that can be called inside other workflows, making pipelines modular and structured.</p>
-<p>Example: Connecting two workflows:</p>
-<div class="highlight"><pre><span></span><code>workflow my_workflow {
-    foo()
-    bar( foo.out.collect() )
-}
+<h2 id="step-1-creating-input-channels"><strong>Step 1: Creating input channels</strong></h2>
+<p>We need to define two <strong>input channels</strong>:<br />
+1. <strong><code>bamFile_ch</code></strong> – This channel collects all <strong><code>.BAM</code></strong> files from the <code>data/bam_files/</code> folder.<br />
+2. <strong><code>refSeq_ch</code></strong> – This channel collects the <strong><code>.FASTA</code></strong> reference genome from the <code>data/</code> folder.  </p>
+<p>Open the <code>main.nf</code> file and add the following:</p>
+<div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow
 
+nextflow.enable.dsl=2
+
+// Define channels to provide input data
+bamFile_ch = Channel.fromPath(&quot;data/bam_files/*.bam&quot;) // Collects all .BAM files
+refSeq_ch = Channel.fromPath(&quot;data/*.fasta&quot;)          // Collects the reference genome
+</code></pre></div>
+<ul>
+<li>Here, we are using channel factory <a href="https://www.nextflow.io/docs/latest/channel.html#channel-factories"><code>Channel.fromPath()</code></a>` to create channnel and assign it to a variable:</li>
+<li><code>Channel.fromPath("data/bam_files/*.bam")</code> → Looks for all <code>.BAM</code> files in <code>data/bam_files/</code>.</li>
+<li><code>Channel.fromPath("data/*.fasta")</code> → Looks for the reference genome <code>.FASTA</code> file inside <code>data/</code>.</li>
+</ul>
+<hr />
+<h2 id="step-2-importing-the-modules-into-mainnf"><strong>Step 2: Importing the Modules into <code>main.nf</code></strong></h2>
+<p>Now that we have our input channels, we need to import the Freyja modules so we can use them inside <code>main.nf</code>.</p>
+<p>Why do we need to import modules?</p>
+<p>Modules are stored in separate <code>.nf</code> files, so we must tell Nextflow where to find them.
+The <a href="https://www.nextflow.io/docs/latest/reference/syntax.html#include"><code>include</code></a> command makes the processes available in <code>main.nf</code>.</p>
+<p>Add these imports to <code>main.nf</code></p>
+<div class="highlight"><pre><span></span><code>// Import the two modules into main.nf
+include { FREYJA_VARIANTS } from &#39;./modules/freyja_variants.nf&#39;
+include { FREYJA_DEMIX } from &#39;./modules/freyja_demix.nf
+</code></pre></div>
+<ul>
+<li><code>include { FREYJA_VARIANTS } from './modules/freyja_variants.nf'</code> → This imports the <code>FREYJA_VARIANTS</code> process from <code>freyja_variants.nf</code>.</li>
+<li><code>include { FREYJA_DEMIX } from './modules/freyja_demix.nf'</code> → This imports the <code>FREYJA_DEMIX</code> process from <code>freyja_demix.nf</code>.</li>
+</ul>
+<p>Now, Nextflow knows where to find our process definitions.</p>
+<hr />
+<h2 id="step-3-creating-the-workflow"><strong>Step 3: Creating the Workflow</strong></h2>
+<p>Let’s now define the workflow, which serves as the entry point of our pipeline. It controls the execution order of processes and passes input between them.</p>
+<p>Add this to <code>main.nf</code> file:</p>
+<div class="highlight"><pre><span></span><code>// Define the workflow (entry point of our pipeline)
 workflow {
-    my_workflow()
+    // Run the first process (FREYJA_VARIANTS) and pass it the input channels
+    FREYJA_VARIANTS(refSeq_ch, bamFile_ch)
+
+    // Run the second process (FREYJA_DEMIX) and pass it the output from the first process
+    FREYJA_DEMIX(FREYJA_VARIANTS.out.variants, FREYJA_VARIANTS.out.depths)
 }
 </code></pre></div>
-<p>Explanation:</p>
+<p>The first process, <code>FREYJA_VARIANTS</code>, runs first:</p>
 <ul>
-<li>
-<p><code>my_workflow</code> is a named workflow that contains two processes:<br />
-        1. <code>foo()</code> runs first.<br />
-        2. <code>bar()</code> takes the output of <code>foo()</code> and processes it.  </p>
-</li>
-<li>
-<p>The main workflow (<code>workflow { my_workflow() }</code>) calls <code>my_workflow()</code>, executing everything in order.  </p>
-</li>
+<li>It takes a <code>.FASTA</code> reference genome file from the <code>refSeq_ch</code> channel and <code>.BAM</code> files from the <code>bamFile_ch</code> channel as input.</li>
+<li>It emits variant and depth channels, which contain the output files from the <code>FREYJA_VARIANTS</code> process.</li>
 </ul>
+<p>The second process, <code>FREYJA_DEMIX</code>, runs next:</p>
+<ul>
+<li>It takes the variant and depth channels from the first process as input.</li>
+<li>It produces a channel containing a <code>.tsv</code> file with estimated lineage abundances as output.</li>
+</ul>
+<hr />
+<p>Here is how your final main.nf file should look:</p>
+<div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow
+
+nextflow.enable.dsl=2
+
+// Define channels to provide input data
+bamFile_ch = Channel.fromPath(&quot;data/bam_files/*.bam&quot;) // Collects all .BAM files
+refSeq_ch = Channel.fromPath(&quot;data/*.fasta&quot;)          // Collects the reference genome
+
+// Import the two modules into main.nf
+include { FREYJA_VARIANTS } from &#39;./modules/freyja_variants.nf&#39;
+include { FREYJA_DEMIX } from &#39;./modules/freyja_demix.nf&#39;
+
+// Define the workflow (entry point of our pipeline)
+workflow {
+    // Run the first process (FREYJA_VARIANTS) and pass it the input channels
+    FREYJA_VARIANTS(refSeq_ch, bamFile_ch)
+
+    // Run the second process (FREYJA_DEMIX) and pass it the output from the first process
+    FREYJA_DEMIX(FREYJA_VARIANTS.out.variants, FREYJA_VARIANTS.out.depth)
+}
+</code></pre></div>
+<p>Next, we will run the pipeline and test if everything works correctly!</p>
 <hr />
 
 
@@ -1056,7 +1100,7 @@ workflow {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../operators/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Operators">
+          <a href="../demix/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Demix Module">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1066,27 +1110,11 @@ workflow {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Operators
+                Demix Module
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../freyja_basics/" class="md-footer__link md-footer__link--next" aria-label="Next: Freyja Basics">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Freyja Basics
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

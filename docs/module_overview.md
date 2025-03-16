@@ -4,7 +4,7 @@
 Now that we’ve created **Nextflow processes**, let's organize them using **modules**.  
 
 ### **What is a Module?**
-A **module** in Nextflow is simply a **separate file** that contains a **process**.  
+A [**module**](https://www.nextflow.io/docs/latest/module.html#modules) in Nextflow is simply a **separate file** that contains a **process**.  
 Using modules helps to:
 
 - **Keep the pipeline organized** – Each process has its own file.  

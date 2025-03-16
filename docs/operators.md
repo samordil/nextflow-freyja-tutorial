@@ -10,11 +10,11 @@ They help modify, filter, and combine data before passing it to a process.
 
 | Operator | Description | Example |
 |----------|-------------|---------|
-| `map` | Transforms each element in a channel | Convert file names to uppercase |
-| `filter` | Selects elements that match a condition | Keep only `.txt` files |
-| `collect` | Gathers all elements into a single list | Collect all sample names |
-| `flatten` | Flattens nested lists into a single list | Convert list of lists into one |
-| `groupTuple` | Groups data into pairs | Pair samples with metadata |
+| [`map`](https://www.nextflow.io/docs/latest/reference/operator.html#map) | Transforms each element in a channel | Convert file names to uppercase |
+| [`filter`](https://www.nextflow.io/docs/latest/reference/operator.html#filter) | Selects elements that match a condition | Keep only `.txt` files |
+| [`collect`](https://www.nextflow.io/docs/latest/reference/operator.html#collect) | Gathers all elements into a single list | Collect all sample names |
+| [`flatten`](https://www.nextflow.io/docs/latest/reference/operator.html#flatten) | Flattens nested lists into a single list | Convert list of lists into one |
+| [`groupTuple`](https://www.nextflow.io/docs/latest/reference/operator.html#grouptuple) | Groups data into pairs | Pair samples with metadata |
 
 ---
 
