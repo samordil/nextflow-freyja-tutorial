@@ -1067,21 +1067,22 @@ workflow {
 
 nextflow.enable.dsl=2
 
-// Define channels to provide input data
-bamFile_ch = Channel.fromPath(&quot;data/bam_files/*.bam&quot;) // Collects all .BAM files
-refSeq_ch = Channel.fromPath(&quot;data/*.fasta&quot;)          // Collects the reference genome
-
 // Import the two modules into main.nf
 include { FREYJA_VARIANTS } from &#39;./modules/freyja_variants.nf&#39;
 include { FREYJA_DEMIX } from &#39;./modules/freyja_demix.nf&#39;
 
 // Define the workflow (entry point of our pipeline)
 workflow {
+
+    // Define channels to provide input data
+    bamFile_ch = Channel.fromPath(&quot;data/bam_files/*.bam&quot;) // Collects all .BAM files
+    refSeq_ch = Channel.fromPath(&quot;data/*.fasta&quot;)          // Collects the reference genome
+
     // Run the first process (FREYJA_VARIANTS) and pass it the input channels
     FREYJA_VARIANTS(refSeq_ch, bamFile_ch)
 
     // Run the second process (FREYJA_DEMIX) and pass it the output from the first process
-    FREYJA_DEMIX(FREYJA_VARIANTS.out.variants, FREYJA_VARIANTS.out.depth)
+    FREYJA_DEMIX(FREYJA_VARIANTS.out.variants, FREYJA_VARIANTS.out.depths)
 }
 </code></pre></div>
 <p>Next, we will run the pipeline and test if everything works correctly!</p>

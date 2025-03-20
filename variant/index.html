@@ -1056,7 +1056,7 @@
         path &quot;${bam_basename}.depths&quot;, emit: depths
 
     script:
-    bam_basename = bam_file.baseName
+    bam_basename = bam_file.simpleName
 
     &quot;&quot;&quot;
     freyja variants $bam_file \

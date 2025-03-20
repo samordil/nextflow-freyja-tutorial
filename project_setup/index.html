@@ -1030,16 +1030,15 @@ touch<span class="w"> </span>modules/freyja_demix.nf
 Each of these <code>.nf</code> files will contain a Nextflow process for running Freyja commands.</p>
 <hr />
 <h2 id="step-5-set-up-the-data-directory"><strong>Step 5: Set Up the Data Directory</strong></h2>
-<p>Finally, create a data/ folder to store input files:</p>
-<p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>data<span class="w">  </span>
-touch<span class="w"> </span>data/ref_genome.fasta<span class="w">  </span>
+<p>Download the test data (a compressed archive file):</p>
+<p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/samordil/nextflow-freyja-tutorial/raw/refs/heads/main/data.tar.gz<span class="w"> </span>
 </code></pre></div>
-Inside bam_files/, add some sample <code>.BAM</code> files (or copy real .BAM files here):</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>data/bam_files<span class="w">  </span>
-touch<span class="w"> </span>data/bam_files/sample1.bam<span class="w">  </span>
-touch<span class="w"> </span>data/bam_files/sample2.bam<span class="w">  </span>
-touch<span class="w"> </span>data/bam_files/sample3.bam<span class="w"> </span>
+Extract the archive to create the data directory:</p>
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xzf<span class="w"> </span>data.tar.gz
 </code></pre></div>
+<p>Remove the archive file (to save space, since we don’t need it anymore):
+<div class="highlight"><pre><span></span><code>rm<span class="w">  </span>data.tar.gz
+</code></pre></div></p>
 <p>Now that we’ve set up the project, let's start writing the Nextflow modules!</p>
 <hr />
 
