@@ -1091,7 +1091,7 @@
 </ul>
 <hr />
 <h3 id="defining-outputs"><strong>Defining Outputs</strong></h3>
-<p>The output section declares the files the process will generate.</p>
+<p>The output section specifies the channel that will be made available for other processes or workflows.</p>
 <div class="highlight"><pre><span></span><code>    output:
         path &quot;${bam_basename}.variants&quot;, emit: variants
         path &quot;${bam_basename}.depths&quot;, emit: depths

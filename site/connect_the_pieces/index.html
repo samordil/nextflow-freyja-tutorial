@@ -1046,6 +1046,21 @@ workflow {
 <li>It takes the variant and depth channels from the first process as input.</li>
 <li>It produces a channel containing a <code>.tsv</code> file with estimated lineage abundances as output.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In a Nextflow process, the <code>output</code> section defines what results the process will make available to the workflow.</p>
+<ul>
+<li>In the <code>FREYJA_VARIANTS</code> process, we <strong>emit</strong> two named outputs channels:  </li>
+<li><code>variants</code> → <code>${bam_basename}.variants, emit: variants</code> file  </li>
+<li><code>depths</code> → <code>${bam_basename}.depths emit: depths</code> file  </li>
+</ul>
+<p>To access these outputs channels in the workflow, we use <code>PROCESS_NAME.out.&lt;channel_name&gt;</code>:</p>
+<ul>
+<li><code>FREYJA_VARIANTS.out.variants</code> refers to the <strong>variants</strong> output channel.  </li>
+<li><code>FREYJA_VARIANTS.out.depths</code> refers to the <strong>depths</strong> output channel.  </li>
+</ul>
+<p>If no names were assigned using <code>emit</code>, then <code>FREYJA_VARIANTS.out</code> would return all outputs as a single channel.  </p>
+</div>
 <hr />
 <p>Here is how your final main.nf file should look:</p>
 <div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow

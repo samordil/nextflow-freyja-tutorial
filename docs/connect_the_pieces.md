@@ -82,6 +82,21 @@ The second process, `FREYJA_DEMIX`, runs next:
 - It takes the variant and depth channels from the first process as input.
 - It produces a channel containing a `.tsv` file with estimated lineage abundances as output.
 
+  
+!!! note
+    In a Nextflow process, the `output` section defines what results the process will make available to the workflow.
+
+    - In the `FREYJA_VARIANTS` process, we **emit** two named outputs channels:  
+    - `variants` → `${bam_basename}.variants, emit: variants` file  
+    - `depths` → `${bam_basename}.depths emit: depths` file  
+
+    To access these outputs channels in the workflow, we use `PROCESS_NAME.out.<channel_name>`:
+
+    - `FREYJA_VARIANTS.out.variants` refers to the **variants** output channel.  
+    - `FREYJA_VARIANTS.out.depths` refers to the **depths** output channel.  
+
+    If no names were assigned using `emit`, then `FREYJA_VARIANTS.out` would return all outputs as a single channel.  
+
 ---
 
 Here is how your final main.nf file should look:

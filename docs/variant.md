@@ -73,7 +73,7 @@ The input section specifies what files the process needs.
 ---
 
 ### **Defining Outputs**
-The output section declares the files the process will generate.
+The output section specifies the channel that will be made available for other processes or workflows.
 
 ```nextflow
     output:
