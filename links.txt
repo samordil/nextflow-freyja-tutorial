@@ -1,0 +1,8 @@
+BAM file source
+https://github.com/Balays/SARS-CoV2_ONT_data
+
+
+wget -O bc01.bam ftp.sra.ebi.ac.uk/vol1/run/ERR871/ERR8711392/SARS_COV2_inf_hpi1_bc01_A_pass.bam
+wget -O bc02.bam ftp.sra.ebi.ac.uk/vol1/run/ERR871/ERR8711394/SARS_COV2_inf_hpi1_bc02_B_pass.bam
+wget -O bc03.bam ftp.sra.ebi.ac.uk/vol1/run/ERR871/ERR8711396/SARS_COV2_inf_hpi1_bc03_C_pass.bam
+wget -O NC_045512.2.fasta https://raw.githubusercontent.com/Balays/SARS-CoV2_ONT_data/refs/heads/main/NC_045512.2.fasta
