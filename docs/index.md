@@ -4,13 +4,13 @@ Welcome to **Nextflow Training Tutorial with Freyja**!
 
 This tutorial is designed to teach you [Nextflow](https://www.nextflow.io/docs/latest/overview.html) by using examples with [Freyja](https://andersen-lab.github.io/Freyja/index.html#), a tool for analyzing SARS-CoV-2 wastewater sequencing data.
 
-## What You'll Learn
+## **What You'll Learn**
 - **Introduction to Nextflow** – Basics, syntax, and workflow concepts
 - **Understanding Freyja** – What it does and how it works
 - **Building a Nextflow pipeline** to process sequencing data using Freyja
 - **Running and optimizing Nextflow workflows**
 
-## Tutorial Outline
+## **Tutorial Outline**
 
 ### **Introduction to Nextflow**
 - What is Nextflow?

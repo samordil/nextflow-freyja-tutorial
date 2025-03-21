@@ -1,6 +1,6 @@
-# Understanding Processes in Nextflow  
+# **Understanding Processes in Nextflow** 
 
-## What Are Processes?  
+## **What Are Processes?**  
 
 A [**process**](https://www.nextflow.io/docs/latest/process.html) in Nextflow is a **unit of execution** that:
 
@@ -13,7 +13,7 @@ Processes are **isolated** from each other, often run in **parallel** and commun
 ---
 
 
-## Basic structure of a process  
+## **Basic structure of a process**  
 A **process** follows this structure:  
 
 ```nextflow

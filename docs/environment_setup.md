@@ -43,25 +43,31 @@ freyja --help
 
 ## **Alternative installation via conda**
 
-If you prefer using Conda, first ensure it is installed. If not, follow the official installation [guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html). 
+If you prefer using Conda, first ensure it is installed. If not, follow the official [installation guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html). 
 
-Once Conda is set up, create a new environment named training-tutorial with Python by running:
+Once Conda is set up, create a new environment named training-tutorial with Python 3.10 by running:
 
 ```bash
 conda create -n training-tutorial python=3.10
 ```
 
-Activate the environment:
+Activate the newly created environment:
 
 ```bash
 conda activate training-tutorial
 ```
 
-Now, install Nextflow and Freyja using conda:
+Now, install Nextflow, the workflow manager:
 
 ```bash
 conda install bioconda::nextflow
+```
+
+Then, install Freyja, the tool for lineage analysis:
+```bash
 conda install bioconda::freyja
 ```
+
+Once installed, your environment is ready to use!
 
 ---

@@ -20,17 +20,17 @@ Here is the full code for the FREYJA_VARIANTS process:
 
 ```nextflow
 process FREYJA_VARIANTS {
-    
+
     input:
         path fasta_file
         each path(bam_file)
-        
+
     output:
         path "${bam_basename}.variants", emit: variants
         path "${bam_basename}.depths", emit: depths
 
     script:
-    bam_basename = bam_file.baseName
+    bam_basename = bam_file.simpleName
 
     """
     freyja variants $bam_file \

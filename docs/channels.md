@@ -1,6 +1,6 @@
-# Understanding Channels in Nextflow  
+# **Understanding Channels in Nextflow**  
 
-## What Are Channels?  
+## **What Are Channels?**  
 In nextflow, [**channels**](https://www.nextflow.io/docs/latest/channel.html) are the main way data moves between processes.  
 They act as **data streams**, passing files, variables, or other values between processes.  
 
@@ -8,7 +8,7 @@ Think of channels as **conveyor belts** that move data from one process to anoth
 
 ---
 
-## Types of Channels 
+## **Types of Channels** 
 Channels in Nextflow are one-directional and can be either:
 
 - **Value Channel** – Hold a single value (e.g., a number or string).
@@ -16,7 +16,7 @@ Channels in Nextflow are one-directional and can be either:
 
 ---
 
-## Creating Channels  
+## **Creating Channels**  
 Channels can be created using built-in [**factory methods**](https://www.nextflow.io/docs/latest/channel.html#channel-factories) like ``Channel.of()``, `Channel.from()`, `Channel.fromPath()` and `Channel.value()`.  
 
 ---

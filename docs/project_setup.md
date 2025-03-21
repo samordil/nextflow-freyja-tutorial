@@ -48,19 +48,20 @@ Each of these `.nf` files will contain a Nextflow process for running Freyja com
 --- 
 
 ## **Step 5: Set Up the Data Directory**
-Finally, create a data/ folder to store input files:
+Download the test data (a compressed archive file):
 
 ```bash
-mkdir data  
-touch data/ref_genome.fasta  
+wget https://github.com/samordil/nextflow-freyja-tutorial/raw/refs/heads/main/data.tar.gz 
 ```
-Inside bam_files/, add some sample `.BAM` files (or copy real .BAM files here):
+Extract the archive to create the data directory:
 
 ```bash
-mkdir data/bam_files  
-touch data/bam_files/sample1.bam  
-touch data/bam_files/sample2.bam  
-touch data/bam_files/sample3.bam 
+tar xzf data.tar.gz
+``` 
+
+Remove the archive file (to save space, since we don’t need it anymore):
+```bash
+rm  data.tar.gz
 ``` 
 
 Now that we’ve set up the project, let's start writing the Nextflow modules!
