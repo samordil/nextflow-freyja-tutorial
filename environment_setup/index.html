@@ -1059,7 +1059,7 @@
 <hr />
 <h3 id="step-1-installing-nextflow-and-freyja-via-conda"><strong>Step 1: Installing Nextflow and Freyja via Conda</strong></h3>
 <p>Once Conda is set up, create a new environment named training-tutorial with Python 3.10 by running:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>training-tutorial<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>training-tutorial<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10<span class="w"> </span>-y
 </code></pre></div>
 <hr />
 <h3 id="step-2-activate-the-environment"><strong>Step 2: Activate the Environment</strong></h3>
@@ -1069,25 +1069,37 @@
 <hr />
 <h3 id="step-3-install-nextflow"><strong>Step 3: Install nextflow</strong></h3>
 <p>Nextflow is a tool for managing workflows. Install it by running:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>bioconda::nextflow
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>bioconda::nextflow<span class="w"> </span>-y
 </code></pre></div>
 <hr />
 <h3 id="step-4-install-freyja"><strong>Step 4: Install freyja</strong></h3>
 <p>Freyja is used for lineage analysis. Install it with:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>bioconda::freyja
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>bioconda::freyja<span class="w"> </span>-y
 </code></pre></div>
 <hr />
 <h3 id="step-5-install-pyarrow-a-required-dependency"><strong>Step 5: Install pyarrow (a required dependency)</strong></h3>
 <p>Freyja needs pyarrow to work properly. Install it using:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>anaconda::pyarrow
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>anaconda::pyarrow<span class="w"> </span>-y
 </code></pre></div>
 <hr />
 <h3 id="step-6-verify-installation"><strong>Step 6: Verify installation</strong></h3>
 <p>Once installed, check if everything is working by running:</p>
 <div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>-version
-freyja<span class="w"> </span>--version
 </code></pre></div>
-<p>If these commands display version information or help messages, your setup is complete!</p>
+<p>output:
+<div class="highlight"><pre><span></span><code>      N E X T F L O W
+      version 24.10.5 build 5935
+      created 04-03-2025 17:55 UTC (20:55 EAST)
+      cite doi:10.1038/nbt.3820
+      http://nextflow.io
+</code></pre></div></p>
+<hr />
+<p><div class="highlight"><pre><span></span><code>freyja<span class="w"> </span>--version
+</code></pre></div>
+output:
+<div class="highlight"><pre><span></span><code>freyja, version 1.5.3
+</code></pre></div></p>
+<p>If these commands display version information, your setup is complete!</p>
 <hr />
 
 
