@@ -1071,7 +1071,7 @@ process sayHello {
 }
 
 workflow {
-    sayHello()
+    sayHello().view()
 }
 </code></pre></div>
 <h3 id="breaking-it-down"><strong>Breaking it down:</strong></h3>
@@ -1095,8 +1095,12 @@ A process is a unit of execution. In this case, it runs a small shell command.<b
 Captures the <strong>output of the process</strong>, in this case, the text "Hello, Nextflow!".<br />
 <br></p>
 </li>
-<li><strong>Defining a workflow (<code>workflow { sayHello() }</code>)</strong><br />
-    The <strong>workflow</strong> section calls the <code>sayHello</code> process. In larger pipelines, this is where you define how different processes connect.  </li>
+<li><strong>Defining a workflow:</strong> 
+<div class="highlight"><pre><span></span><code>workflow<span class="w"> </span><span class="o">{</span><span class="w"> </span>
+<span class="w">    </span>sayHello<span class="o">()</span>.view<span class="o">()</span><span class="w"> </span>
+<span class="o">}</span>
+</code></pre></div>
+The <strong>workflow</strong> section defines how processes run. In larger pipelines, this is where you define how different processes connect. Here, it calls <code>sayHello()</code> process and <code>.view()</code> displays its output to the terminal.</li>
 </ul>
 <hr />
 <h2 id="running-your-first-nextflow-script"><strong>Running your first nextflow script</strong></h2>
@@ -1105,11 +1109,15 @@ Captures the <strong>output of the process</strong>, in this case, the text "Hel
 </code></pre></div>
 <h3 id="expected-output"><strong>Expected Output</strong></h3>
 <p>If everything is set up correctly, you should see something like this:</p>
-<div class="highlight"><pre><span></span><code>N<span class="w"> </span>E<span class="w"> </span>X<span class="w"> </span>T<span class="w"> </span>F<span class="w"> </span>L<span class="w"> </span>O<span class="w"> </span>W<span class="w">  </span>~<span class="w">  </span>version<span class="w"> </span>X.X.X
-Launching<span class="w"> </span><span class="sb">`</span>hello.nf<span class="sb">`</span><span class="w"> </span><span class="o">[</span>random_id<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>revision<span class="w"> </span>X.X.X
+<div class="highlight"><pre><span></span><code><span class="w"> </span>N<span class="w"> </span>E<span class="w"> </span>X<span class="w"> </span>T<span class="w"> </span>F<span class="w"> </span>L<span class="w"> </span>O<span class="w"> </span>W<span class="w">   </span>~<span class="w">  </span>version<span class="w"> </span><span class="m">24</span>.10.5
+
+Launching<span class="w"> </span><span class="sb">`</span>hello.nf<span class="sb">`</span><span class="w"> </span><span class="o">[</span>drunk_gates<span class="o">]</span><span class="w"> </span>DSL2<span class="w"> </span>-<span class="w"> </span>revision:<span class="w"> </span>c2fd982266
+
+executor<span class="w"> </span>&gt;<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
+<span class="o">[</span>d4/99ae5a<span class="o">]</span><span class="w"> </span>sayHello<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>✔
 Hello,<span class="w"> </span>Nextflow!
 </code></pre></div>
-<p>This confirms that <strong>Nextflow is installed and working correctly!</strong></p>
+<p>This confirms that the sayHello process ran successfully once (1 of 1 ✔).</p>
 <hr />
 
 
