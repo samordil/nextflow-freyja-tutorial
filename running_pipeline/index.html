@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#running-and-testing-the-nextflow-pipeline" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -833,6 +838,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-checking-our-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Checking Our Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-running-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Running the Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -848,8 +890,6 @@
 
 
 
-  <h1>Running pipeline</h1>
-
 <div class="highlight"><pre><span></span><code>(training-tutorial) user-machine$ nextflow run main.nf 
 
  N E X T F L O W   ~  version 24.10.5
@@ -860,6 +900,25 @@ executor &gt;  local (6)
 [c0/b014cd] FREYJA_VARIANTS (3) [100%] 3 of 3 ✔
 [7e/b05de0] FREYJA_DEMIX (2)    [100%] 3 of 3 ✔
 </code></pre></div>
+<h1 id="running-and-testing-the-nextflow-pipeline">🚀 <strong>Running and Testing the Nextflow Pipeline</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>Now that we've set up our <strong>Nextflow pipeline</strong>, it's time to <strong>run it</strong> and see if everything works!<br />
+In this section, we will:<br />
+✅ Run the pipeline step by step.<br />
+✅ Check that our processes execute correctly.<br />
+✅ Troubleshoot any potential errors.  </p>
+<hr />
+<h2 id="step-1-checking-our-setup"><strong>Step 1: Checking Our Setup</strong></h2>
+<p>Before running the pipeline, let’s make sure everything is in place:  </p>
+<p>✅ You have <strong>Nextflow</strong> installed (<code>nextflow -version</code>).<br />
+✅ Your <strong>project structure</strong> matches what we set up earlier.<br />
+✅ Your <strong>input data</strong> (FASTA and BAM files) are in the <code>data/</code> folder.  </p>
+<p>If everything looks good, let's move on! 🎯  </p>
+<hr />
+<h2 id="step-2-running-the-pipeline"><strong>Step 2: Running the Pipeline</strong></h2>
+<p>Open your <strong>terminal</strong> and navigate to your project directory:<br />
+```bash
+cd path/to/your/project</p>
 
 
 
