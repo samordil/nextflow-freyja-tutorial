@@ -449,9 +449,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-creating-a-simple-channel" class="md-nav__link">
+  <a href="#example-1-creating-a-value-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Creating a simple channel
+      Example 1: Creating a value channel
     </span>
   </a>
   
@@ -983,9 +983,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-creating-a-simple-channel" class="md-nav__link">
+  <a href="#example-1-creating-a-value-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Creating a simple channel
+      Example 1: Creating a value channel
     </span>
   </a>
   
@@ -1044,14 +1044,14 @@ They act as <strong>data streams</strong>, passing files, variables, or other va
 </ul>
 <hr />
 <h2 id="creating-channels"><strong>Creating Channels</strong></h2>
-<p>Channels can be created using built-in <a href="https://www.nextflow.io/docs/latest/channel.html#channel-factories"><strong>factory methods</strong></a> like <code>Channel.of()</code>, <code>Channel.from()</code>, <code>Channel.fromPath()</code> and <code>Channel.value()</code>.  </p>
+<p>Channels can be created using built-in <a href="https://nextflow.io/docs/latest/reference/channel.html"><strong>factory factories</strong></a> like <code>Channel.fromSRA()</code>, <code>Channel.fromPath()</code> and <code>Channel.value()</code>.  </p>
 <hr />
-<h3 id="example-1-creating-a-simple-channel"><strong>Example 1</strong>: Creating a simple channel</h3>
-<p><div class="highlight"><pre><span></span><code>sample_ch = Channel.of(&quot;sample1.fastq&quot;, &quot;sample2.fastq&quot;, &quot;sample3.fastq&quot;)
+<h3 id="example-1-creating-a-value-channel"><strong>Example 1</strong>: Creating a value channel</h3>
+<p><div class="highlight"><pre><span></span><code>sample_ch = Channel.value(2, 4, 8, 10)
 </code></pre></div>
 What this does:</p>
 <ul>
-<li>Creates a channel containing paths to three FastQ file and assigns them to <code>sample_ch</code> varible.</li>
+<li>Creates a channel containing four values and assigns them to <code>sample_ch</code> varible.</li>
 <li>The <code>sample_ch</code> can now be passed as input to a process</li>
 </ul>
 <hr />
@@ -1066,6 +1066,7 @@ This will create a channel that holds all FASTQ files in the data/ directory.</p
 <li>A process <strong>modifies</strong> the data and sends it to an <strong>output channel</strong>.</li>
 <li>The <strong>output channel</strong> can then be used by another process.</li>
 </ul>
+<hr />
 
 
 
