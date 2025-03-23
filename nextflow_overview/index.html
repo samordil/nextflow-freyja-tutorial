@@ -1066,7 +1066,7 @@ process sayHello {
 
     script:
     &quot;&quot;&quot;
-    echo &quot;Hello, Nextflow!&quot;
+    echo &quot;Hello, World!&quot;
     &quot;&quot;&quot;
 }
 
@@ -1087,12 +1087,12 @@ A process is a unit of execution. In this case, it runs a small shell command.<b
 <br></li>
 <li>
 <p>The <strong>script section</strong> contains the actual command:
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, Nextflow!&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><strong>Output section (<code>output: stdout</code>)</strong><br />
-Captures the <strong>output of the process</strong>, in this case, the text "Hello, Nextflow!".<br />
+Captures the <strong>output of the process</strong>, in this case, the text "Hello, World!".<br />
 <br></p>
 </li>
 <li><strong>Defining a workflow:</strong> 
@@ -1115,7 +1115,7 @@ Launching<span class="w"> </span><span class="sb">`</span>hello.nf<span class="s
 
 executor<span class="w"> </span>&gt;<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
 <span class="o">[</span>d4/99ae5a<span class="o">]</span><span class="w"> </span>sayHello<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>✔
-Hello,<span class="w"> </span>Nextflow!
+Hello,<span class="w"> </span>World!
 </code></pre></div>
 <p>This confirms that the sayHello process ran successfully once (1 of 1 ✔).</p>
 <hr />
