@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../environment_setup/">
+        <link rel="prev" href="../connect_the_pieces/">
       
       
-        <link rel="next" href="../channels/">
+        <link rel="next" href="../customizing_parameters/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Overview - Nextflow & Freyja Tutorial</title>
+        <title>Running the Pipeline - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-nextflow" class="md-skip">
+        <a href="#running-and-testing-the-nextflow-pipeline" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Running the Pipeline
             
           </span>
         </div>
@@ -310,19 +310,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nextflow Basics
@@ -348,31 +346,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../nextflow_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,92 +359,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-use-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why use nextflow?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nextflow-script-basics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nextflow script basics
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nextflow script basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-hello-world-in-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Hello World in Nextflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-it-down" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking it down:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-your-first-nextflow-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running your first nextflow script
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Running your first nextflow script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -593,17 +484,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -618,7 +511,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Building Nextflow Pipeline
@@ -805,10 +698,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../running_pipeline/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Running the Pipeline
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -818,6 +732,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-running-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Running the Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-checking-output-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Checking Output Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Checking Output Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-process-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Process Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -941,61 +917,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-use-nextflow" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Why use nextflow?
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nextflow-script-basics" class="md-nav__link">
+  <a href="#step-1-running-the-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      Nextflow script basics
+      Step 1: Running the Pipeline
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Nextflow script basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-hello-world-in-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Hello World in Nextflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-it-down" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking it down:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-your-first-nextflow-script" class="md-nav__link">
+  <a href="#step-2-checking-output-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Running your first nextflow script
+      Step 2: Checking Output Files
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Running your first nextflow script">
+    <nav class="md-nav" aria-label="Step 2: Checking Output Files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
+  <a href="#viewing-process-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Expected Output
+      Viewing Process Output
     </span>
   </a>
   
@@ -1022,82 +974,77 @@
 
 
 
-<h1 id="introduction-to-nextflow"><strong>Introduction to nextflow</strong></h1>
-<p><a href="https://www.nextflow.io/docs/latest/overview.html">Nextflow</a> is a <strong>workflow management system</strong> designed to build and run computational pipelines. It is widely used in bioinformatics, data science, and HPC (High-Performance Computing).</p>
-<h2 id="why-use-nextflow"><strong>Why use nextflow?</strong></h2>
-<p>Nextflow makes workflows:</p>
+<h1 id="running-and-testing-the-nextflow-pipeline"><strong>Running and Testing the Nextflow Pipeline</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>Now that we've set up our <strong>Nextflow pipeline</strong>, it's time to <strong>run it</strong> and see if everything works!<br />
+In this section, we will:  </p>
 <ul>
-<li><strong>Reproducible</strong> – Ensures pipelines run the same way on different systems.  </li>
-<li><strong>Scalable</strong> – Works on laptops, HPC clusters, and cloud environments.  </li>
-<li><strong>Modular</strong> – Pipelines are broken into reusable processes (modules).  </li>
-<li><strong>Parallelized</strong> – Automatically runs tasks in parallel when possible.  </li>
+<li>Run the pipeline step by step.  </li>
+<li>Check that our processes execute correctly.  </li>
+<li>Troubleshoot any potential errors.  </li>
 </ul>
 <hr />
-<h2 id="nextflow-script-basics"><strong>Nextflow script basics</strong></h2>
-<p>A Nextflow pipeline is written in <strong>nextflow DSL2 (Domain-Specific Language 2)</strong>. Let's look at a simple example:</p>
-<h3 id="example-hello-world-in-nextflow"><strong>Example: Hello World in Nextflow</strong></h3>
-<div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow     
-
-nextflow.enable.dsl=2
-
-process sayHello {
-    output:
-    stdout
-
-    script:
-    &quot;&quot;&quot;
-    echo &quot;Hello, World!&quot;
-    &quot;&quot;&quot;
-}
-
-workflow {
-    sayHello().view()
-}
+<h2 id="step-1-running-the-pipeline"><strong>Step 1: Running the Pipeline</strong></h2>
+<p>From your terminal run:  </p>
+<div class="highlight"><pre><span></span><code>nextflow run main.nf
 </code></pre></div>
-<h3 id="breaking-it-down"><strong>Breaking it down:</strong></h3>
+<p>Nextflow will execute the pipeline and display progress messages:</p>
+<p><div class="highlight"><pre><span></span><code> N E X T F L O W   ~  version 24.10.5
+
+Launching `main.nf` [nasty_gautier] DSL2 - revision: 43eb342fc2
+
+executor &gt;  local (6)
+[c0/b014cd] FREYJA_VARIANTS (3) [100%] 3 of 3 ✔
+[7e/b05de0] FREYJA_DEMIX (2)    [100%] 3 of 3 ✔
+</code></pre></div>
+If you see ✔ for all processes, congratulations—your pipeline ran successfully!</p>
+<p>Let's break down what each part means:</p>
 <ul>
-<li><strong><code>#!/usr/bin/env nextflow</code></strong><br />
-This tells the system to use <strong>Nextflow</strong> to execute the script.<br />
-<br></li>
-<li><strong><code>nextflow.enable.dsl=2</code></strong><br />
-Enables <strong>Nextflow DSL2</strong>, which is the latest and most flexible version.<br />
-<br></li>
-<li><strong>Defining a process (<code>process sayHello { ... }</code>)</strong><br />
-A process is a unit of execution. In this case, it runs a small shell command.<br />
-<br></li>
-<li>
-<p>The <strong>script section</strong> contains the actual command:
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Output section (<code>output: stdout</code>)</strong><br />
-Captures the <strong>output of the process</strong>, in this case, the text "Hello, World!".<br />
-<br></p>
-</li>
-<li><strong>Defining a workflow:</strong> 
-<div class="highlight"><pre><span></span><code>workflow<span class="w"> </span><span class="o">{</span><span class="w"> </span>
-<span class="w">    </span>sayHello<span class="o">()</span>.view<span class="o">()</span><span class="w"> </span>
-<span class="o">}</span>
-</code></pre></div>
-The <strong>workflow</strong> section defines how processes run. In larger pipelines, this is where you define how different processes connect. Here, it calls <code>sayHello()</code> process and <code>.view()</code> displays its output to the terminal.</li>
+<li><code>N E X T F L O W ~ version 24.10.5</code> → Confirms the Nextflow version you're using.</li>
 </ul>
 <hr />
-<h2 id="running-your-first-nextflow-script"><strong>Running your first nextflow script</strong></h2>
-<p>Save this script as <strong><code>hello.nf</code></strong> and run it with:</p>
-<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>hello.nf
+<ul>
+<li><code>Launching main.nf [nasty_gautier] DSL2 - revision: 43eb342fc2</code> → Shows that Nextflow is running main.nf using DSL2.</li>
+</ul>
+<hr />
+<ul>
+<li><code>executor &gt; local (6)</code> → Tells you that Nextflow is running processes on your local machine. The number (6) indicates the total number of tasks executed.</li>
+</ul>
+<hr />
+<ul>
+<li><code>[c0/b014cd] FREYJA_VARIANTS (3) [100%] 3 of 3 ✔</code> → Process Execution Progress. The FREYJA_VARIANTS process completed all 3 tasks successfully.  <ul>
+<li><code>[c0/b014cd]</code> → Unique task ID, useful for locating outputs in the <code>work/</code> directory.  </li>
+<li><code>FREYJA_VARIANTS</code> → The process name being executed.  </li>
+<li><code>(3)</code> → The last task label that was run. Since there are 3 samples, Nextflow runs 3 parallel tasks.  </li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><code>[7e/b05de0] FREYJA_DEMIX (2) [100%] 3 of 3 ✔</code> → Similar to FREYJA_VARIANTS, this line confirms that the FREYJA_DEMIX process also completed all tasks successfully.</li>
+</ul>
+<hr />
+<h2 id="step-2-checking-output-files"><strong>Step 2: Checking Output Files</strong></h2>
+<p>After the pipeline finishes running, you can check the generated output files. These files will be stored in the work/ directory and the specified output paths.</p>
+<h3 id="viewing-process-output"><strong>Viewing Process Output</strong></h3>
+<p>To check the output of a specific process, first, copy its unique task ID and use the ls command. For example:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>work/c0/b014cd
 </code></pre></div>
-<h3 id="expected-output"><strong>Expected Output</strong></h3>
-<p>If everything is set up correctly, you should see something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span>N<span class="w"> </span>E<span class="w"> </span>X<span class="w"> </span>T<span class="w"> </span>F<span class="w"> </span>L<span class="w"> </span>O<span class="w"> </span>W<span class="w">   </span>~<span class="w">  </span>version<span class="w"> </span><span class="m">24</span>.10.5
-
-Launching<span class="w"> </span><span class="sb">`</span>hello.nf<span class="sb">`</span><span class="w"> </span><span class="o">[</span>drunk_gates<span class="o">]</span><span class="w"> </span>DSL2<span class="w"> </span>-<span class="w"> </span>revision:<span class="w"> </span>c2fd982266
-
-executor<span class="w"> </span>&gt;<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
-<span class="o">[</span>d4/99ae5a<span class="o">]</span><span class="w"> </span>sayHello<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>✔
-Hello,<span class="w"> </span>World!
+<p>Press the Tab key to auto-complete the path, then press Enter. You should see output similar to this for one of the FREYJA_DEMIX tasks:</p>
+<div class="highlight"><pre><span></span><code><span class="n">variant</span><span class="p">.</span><span class="n">tsv</span><span class="w">  </span><span class="n">data</span>
 </code></pre></div>
-<p>This confirms that the sayHello process ran successfully once (1 of 1 ✔).</p>
+<p>If you want to view the contents of a file, use the less command instead of ls:</p>
+<div class="highlight"><pre><span></span><code>less<span class="w"> </span>work/c0/b014cd/variant.tsv
+</code></pre></div>
+<p>This will display the contents of the file, for example:</p>
+<div class="highlight"><pre><span></span><code>    sample.variants.tsv
+summarized  [(&#39;Other&#39;, 0.9999999999188374)]
+lineages    B.1.160.22
+abundances  1.00000000
+resid   4.696910204950047
+coverage    10.597598903120089
+</code></pre></div>
+<p>Now, let’s move on to organizing the output files from different processes and using custom parameters to refine our pipeline.</p>
 <hr />
 
 
@@ -1128,7 +1075,7 @@ Hello,<span class="w"> </span>World!
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../environment_setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Local installation">
+          <a href="../connect_the_pieces/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connecting the Pieces">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1138,20 +1085,20 @@ Hello,<span class="w"> </span>World!
                 Previous
               </span>
               <div class="md-ellipsis">
-                Local installation
+                Connecting the Pieces
               </div>
             </div>
           </a>
         
         
           
-          <a href="../channels/" class="md-footer__link md-footer__link--next" aria-label="Next: Channels">
+          <a href="../customizing_parameters/" class="md-footer__link md-footer__link--next" aria-label="Next: Customizing Parameters">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Channels
+                Customizing Parameters
               </div>
             </div>
             <div class="md-footer__button md-icon">

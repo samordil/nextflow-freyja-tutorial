@@ -449,9 +449,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-creating-a-simple-channel" class="md-nav__link">
+  <a href="#example-1-creating-a-value-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Creating a simple channel
+      Example 1: Creating a value channel
     </span>
   </a>
   
@@ -795,6 +795,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running the Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -809,32 +831,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../customizing_parameters.md" class="md-nav__link">
+      <a href="../customizing_parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Customizing Parameters
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../handling_multiple_samples.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Handling Multiple Samples
     
   </span>
   
@@ -872,11 +873,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../debugging_troubleshooting.md" class="md-nav__link">
+      <a href="../containers_reproducibility.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Debugging
+    Containers & Reproducibility
     
   </span>
   
@@ -898,27 +899,6 @@
   
   <span class="md-ellipsis">
     Best Practices
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../containers_reproducibility.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Containers & Reproducibility
     
   </span>
   
@@ -983,9 +963,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-creating-a-simple-channel" class="md-nav__link">
+  <a href="#example-1-creating-a-value-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Creating a simple channel
+      Example 1: Creating a value channel
     </span>
   </a>
   
@@ -1030,28 +1010,28 @@
 
 
 
-<h1 id="understanding-channels-in-nextflow">Understanding Channels in Nextflow</h1>
-<h2 id="what-are-channels">What Are Channels?</h2>
+<h1 id="understanding-channels-in-nextflow"><strong>Understanding Channels in Nextflow</strong></h1>
+<h2 id="what-are-channels"><strong>What Are Channels?</strong></h2>
 <p>In nextflow, <a href="https://www.nextflow.io/docs/latest/channel.html"><strong>channels</strong></a> are the main way data moves between processes.<br />
 They act as <strong>data streams</strong>, passing files, variables, or other values between processes.  </p>
 <p>Think of channels as <strong>conveyor belts</strong> that move data from one process to another. </p>
 <hr />
-<h2 id="types-of-channels">Types of Channels</h2>
+<h2 id="types-of-channels"><strong>Types of Channels</strong></h2>
 <p>Channels in Nextflow are one-directional and can be either:</p>
 <ul>
 <li><strong>Value Channel</strong> – Hold a single value (e.g., a number or string).</li>
 <li><strong>Queue Channel</strong> – Hold multiple values and behave like a stream.</li>
 </ul>
 <hr />
-<h2 id="creating-channels">Creating Channels</h2>
-<p>Channels can be created using built-in <a href="https://www.nextflow.io/docs/latest/channel.html#channel-factories"><strong>factory methods</strong></a> like <code>Channel.of()</code>, <code>Channel.from()</code>, <code>Channel.fromPath()</code> and <code>Channel.value()</code>.  </p>
+<h2 id="creating-channels"><strong>Creating Channels</strong></h2>
+<p>Channels can be created using built-in <a href="https://nextflow.io/docs/latest/reference/channel.html"><strong>factory factories</strong></a> like <code>Channel.fromSRA()</code>, <code>Channel.fromPath()</code> and <code>Channel.value()</code>.  </p>
 <hr />
-<h3 id="example-1-creating-a-simple-channel"><strong>Example 1</strong>: Creating a simple channel</h3>
-<p><div class="highlight"><pre><span></span><code>sample_ch = Channel.of(&quot;sample1.fastq&quot;, &quot;sample2.fastq&quot;, &quot;sample3.fastq&quot;)
+<h3 id="example-1-creating-a-value-channel"><strong>Example 1</strong>: Creating a value channel</h3>
+<p><div class="highlight"><pre><span></span><code>sample_ch = Channel.value(2, 4, 8, 10)
 </code></pre></div>
 What this does:</p>
 <ul>
-<li>Creates a channel containing paths to three FastQ file and assigns them to <code>sample_ch</code> varible.</li>
+<li>Creates a channel containing four values and assigns them to <code>sample_ch</code> varible.</li>
 <li>The <code>sample_ch</code> can now be passed as input to a process</li>
 </ul>
 <hr />
@@ -1066,6 +1046,7 @@ This will create a channel that holds all FASTQ files in the data/ directory.</p
 <li>A process <strong>modifies</strong> the data and sends it to an <strong>output channel</strong>.</li>
 <li>The <strong>output channel</strong> can then be used by another process.</li>
 </ul>
+<hr />
 
 
 

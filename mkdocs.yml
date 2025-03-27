@@ -41,13 +41,12 @@ nav:
           - Variant Module : variant.md
           - Demix Module: demix.md
       - Connecting the Pieces: connect_the_pieces.md
+      - Running the Pipeline: running_pipeline.md
   - Customizing Parameters: customizing_parameters.md
-  - Handling Multiple Samples: handling_multiple_samples.md
   - Parallel Execution: parallel_execution.md
-  - Debugging: debugging_troubleshooting.md
-  - Best Practices: best_practices.md
   - Containers & Reproducibility: containers_reproducibility.md
-
+  - Best Practices: best_practices.md
+ 
 markdown_extensions:
   - admonition             # Enables admonitions like notes, warnings, tips, etc !!! note/warning/tip
   - pymdownx.details       # Allows collapsible admonitions (click to expand) use ??? e.g ??? tip "click to expand"

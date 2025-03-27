@@ -26,7 +26,7 @@ process FREYJA_VARIANTS {
         each path(bam_file)
 
     output:
-        path "${bam_basename}.variants", emit: variants
+        path "${bam_basename}.variants.tsv", emit: variants
         path "${bam_basename}.depths", emit: depths
 
     script:
@@ -77,11 +77,11 @@ The output section specifies the channel that will be made available for other p
 
 ```nextflow
     output:
-        path "${bam_basename}.variants", emit: variants
+        path "${bam_basename}.variants.tsv", emit: variants
         path "${bam_basename}.depths", emit: depths
 ```
 
-- `${bam_basename}.variants` → Contains detected genetic variants.
+- `${bam_basename}.variants.tsv` → Contains detected genetic variants.
 - `${bam_basename}.depths` → Stores sequencing depth information.
 - [`emit`](https://www.nextflow.io/docs/latest/process.html#naming-outputs) labels (`variants` and `depths`) allow other processes to reference these outputs.
 

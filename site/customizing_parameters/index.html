@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../environment_setup/">
+        <link rel="prev" href="../running_pipeline/">
       
-      
-        <link rel="next" href="../channels/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Overview - Nextflow & Freyja Tutorial</title>
+        <title>Customizing Parameters - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-nextflow" class="md-skip">
+        <a href="#customizing-parameters-in-nextflow" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Customizing Parameters
             
           </span>
         </div>
@@ -310,19 +308,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +333,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nextflow Basics
@@ -348,31 +344,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../nextflow_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,92 +357,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-use-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why use nextflow?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nextflow-script-basics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nextflow script basics
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nextflow script basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-hello-world-in-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Hello World in Nextflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-it-down" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking it down:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-your-first-nextflow-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running your first nextflow script
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Running your first nextflow script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -834,10 +723,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../customizing_parameters/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Customizing Parameters
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -847,6 +757,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-adding-parameters-to-nextflowconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Adding Parameters to nextflow.config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-using-parameters-in-mainnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Using Parameters in main.nf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-overriding-parameters-at-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Overriding Parameters at Runtime
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-checking-parameter-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Checking Parameter Values
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -941,68 +916,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-use-nextflow" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Why use nextflow?
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nextflow-script-basics" class="md-nav__link">
+  <a href="#step-1-adding-parameters-to-nextflowconfig" class="md-nav__link">
     <span class="md-ellipsis">
-      Nextflow script basics
+      Step 1: Adding Parameters to nextflow.config
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Nextflow script basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-hello-world-in-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Hello World in Nextflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-it-down" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking it down:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-your-first-nextflow-script" class="md-nav__link">
+  <a href="#step-2-using-parameters-in-mainnf" class="md-nav__link">
     <span class="md-ellipsis">
-      Running your first nextflow script
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Running your first nextflow script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
+      Step 2: Using Parameters in main.nf
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-overriding-parameters-at-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Overriding Parameters at Runtime
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-checking-parameter-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Checking Parameter Values
+    </span>
+  </a>
   
 </li>
       
@@ -1022,82 +976,81 @@
 
 
 
-<h1 id="introduction-to-nextflow"><strong>Introduction to nextflow</strong></h1>
-<p><a href="https://www.nextflow.io/docs/latest/overview.html">Nextflow</a> is a <strong>workflow management system</strong> designed to build and run computational pipelines. It is widely used in bioinformatics, data science, and HPC (High-Performance Computing).</p>
-<h2 id="why-use-nextflow"><strong>Why use nextflow?</strong></h2>
-<p>Nextflow makes workflows:</p>
+<h1 id="customizing-parameters-in-nextflow"><strong>Customizing Parameters in Nextflow</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>So far, we've hardcoded file paths and settings in our pipeline. This works but isn’t very flexible.<br />
+Now, we’ll make our pipeline more <strong>configurable</strong> by using <strong>parameters</strong>.  </p>
 <ul>
-<li><strong>Reproducible</strong> – Ensures pipelines run the same way on different systems.  </li>
-<li><strong>Scalable</strong> – Works on laptops, HPC clusters, and cloud environments.  </li>
-<li><strong>Modular</strong> – Pipelines are broken into reusable processes (modules).  </li>
-<li><strong>Parallelized</strong> – Automatically runs tasks in parallel when possible.  </li>
+<li>Define parameters in <code>nextflow.config</code>.  </li>
+<li>Use them in <code>main.nf</code>.  </li>
+<li>Run the pipeline with custom values.  </li>
 </ul>
 <hr />
-<h2 id="nextflow-script-basics"><strong>Nextflow script basics</strong></h2>
-<p>A Nextflow pipeline is written in <strong>nextflow DSL2 (Domain-Specific Language 2)</strong>. Let's look at a simple example:</p>
-<h3 id="example-hello-world-in-nextflow"><strong>Example: Hello World in Nextflow</strong></h3>
-<div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow     
+<h2 id="step-1-adding-parameters-to-nextflowconfig"><strong>Step 1: Adding Parameters to <code>nextflow.config</code></strong></h2>
+<p>Open (or create) the <code>nextflow.config</code> file and define parameters:  </p>
+<div class="highlight"><pre><span></span><code><span class="n">params</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">bam_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;data/bam_files/&#39;</span><span class="w">   </span><span class="c1">// Folder with BAM files</span>
+<span class="w">    </span><span class="n">ref_genome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;data/ref_genome.fasta&#39;</span><span class="w">  </span><span class="c1">// Reference genome file</span>
+<span class="w">    </span><span class="n">outdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">$</span><span class="o">{</span><span class="n">projectDir</span><span class="o">}/</span><span class="n">Results</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Why use parameters?</p>
+<p>Makes it easy to change input files without editing the script.</p>
+<p>Allows users to override values when running the pipeline.</p>
+<hr />
+<h2 id="step-2-using-parameters-in-mainnf"><strong>Step 2: Using Parameters in <code>main.nf</code></strong></h2>
+<p>Now, update <code>main.nf</code> to use these parameters instead of hardcoded paths.</p>
+<div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow
 
 nextflow.enable.dsl=2
 
-process sayHello {
-    output:
-    stdout
+// Define channels using parameters
+bamFile_ch = Channel.fromPath(&quot;${params.bam_dir}/*.bam&quot;)
+refSeq_ch = Channel.fromPath(params.ref_genome)
 
-    script:
-    &quot;&quot;&quot;
-    echo &quot;Hello, World!&quot;
-    &quot;&quot;&quot;
-}
+// Import modules
+include { FREYJA_VARIANTS } from &#39;./modules/freyja_variants.nf&#39;
+include { FREYJA_DEMIX } from &#39;./modules/freyja_demix.nf&#39;
 
+// Workflow
 workflow {
-    sayHello().view()
+    FREYJA_VARIANTS(refSeq_ch, bamFile_ch)
+    FREYJA_DEMIX(FREYJA_VARIANTS.out.variants, FREYJA_VARIANTS.out.depth)
 }
 </code></pre></div>
-<h3 id="breaking-it-down"><strong>Breaking it down:</strong></h3>
+<p>What changed?</p>
 <ul>
-<li><strong><code>#!/usr/bin/env nextflow</code></strong><br />
-This tells the system to use <strong>Nextflow</strong> to execute the script.<br />
-<br></li>
-<li><strong><code>nextflow.enable.dsl=2</code></strong><br />
-Enables <strong>Nextflow DSL2</strong>, which is the latest and most flexible version.<br />
-<br></li>
-<li><strong>Defining a process (<code>process sayHello { ... }</code>)</strong><br />
-A process is a unit of execution. In this case, it runs a small shell command.<br />
-<br></li>
-<li>
-<p>The <strong>script section</strong> contains the actual command:
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Output section (<code>output: stdout</code>)</strong><br />
-Captures the <strong>output of the process</strong>, in this case, the text "Hello, World!".<br />
-<br></p>
-</li>
-<li><strong>Defining a workflow:</strong> 
-<div class="highlight"><pre><span></span><code>workflow<span class="w"> </span><span class="o">{</span><span class="w"> </span>
-<span class="w">    </span>sayHello<span class="o">()</span>.view<span class="o">()</span><span class="w"> </span>
-<span class="o">}</span>
-</code></pre></div>
-The <strong>workflow</strong> section defines how processes run. In larger pipelines, this is where you define how different processes connect. Here, it calls <code>sayHello()</code> process and <code>.view()</code> displays its output to the terminal.</li>
+<li>Instead of hardcoded paths (data/bam_files/*.bam), we use params.bam_dir.</li>
+<li>Instead of data/ref_genome.fasta, we use params.ref_genome.</li>
 </ul>
+<p>Now, we can easily update file paths by changing nextflow.config.</p>
 <hr />
-<h2 id="running-your-first-nextflow-script"><strong>Running your first nextflow script</strong></h2>
-<p>Save this script as <strong><code>hello.nf</code></strong> and run it with:</p>
-<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>hello.nf
+<h2 id="step-3-overriding-parameters-at-runtime"><strong>Step 3: Overriding Parameters at Runtime</strong></h2>
+<p>Instead of editing nextflow.config, we can pass parameters when running the pipeline.</p>
+<p>For example:</p>
+<p><div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>--bam_dir<span class="w"> </span>my_data/bams<span class="w"> </span>--ref_genome<span class="w"> </span>my_data/genome.fasta<span class="w"> </span>--outdir<span class="w"> </span>my_results
 </code></pre></div>
-<h3 id="expected-output"><strong>Expected Output</strong></h3>
-<p>If everything is set up correctly, you should see something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span>N<span class="w"> </span>E<span class="w"> </span>X<span class="w"> </span>T<span class="w"> </span>F<span class="w"> </span>L<span class="w"> </span>O<span class="w"> </span>W<span class="w">   </span>~<span class="w">  </span>version<span class="w"> </span><span class="m">24</span>.10.5
-
-Launching<span class="w"> </span><span class="sb">`</span>hello.nf<span class="sb">`</span><span class="w"> </span><span class="o">[</span>drunk_gates<span class="o">]</span><span class="w"> </span>DSL2<span class="w"> </span>-<span class="w"> </span>revision:<span class="w"> </span>c2fd982266
-
-executor<span class="w"> </span>&gt;<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
-<span class="o">[</span>d4/99ae5a<span class="o">]</span><span class="w"> </span>sayHello<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>✔
-Hello,<span class="w"> </span>World!
+What happens here?</p>
+<ul>
+<li>
+<p><code>--bam_dir</code> overrides the default <code>params.bam_dir</code>.</p>
+</li>
+<li>
+<p><code>--ref_genome</code> replaces <code>params.ref_genome</code>.</p>
+</li>
+</ul>
+<p>This makes the pipeline more dynamic and reusable across different datasets.</p>
+<hr />
+<h2 id="step-4-checking-parameter-values"><strong>Step 4: Checking Parameter Values</strong></h2>
+<p>If you’re unsure what values are being used, add this to main.nf:</p>
+<div class="highlight"><pre><span></span><code>log.info<span class="w"> </span><span class="s2">&quot;Using BAM directory: </span><span class="si">${</span><span class="nv">params</span><span class="p">.bam_dir</span><span class="si">}</span><span class="s2">&quot;</span>
+log.info<span class="w"> </span><span class="s2">&quot;Using reference genome: </span><span class="si">${</span><span class="nv">params</span><span class="p">.ref_genome</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
-<p>This confirms that the sayHello process ran successfully once (1 of 1 ✔).</p>
+<p>Now, when you run the pipeline, it prints:</p>
+<div class="highlight"><pre><span></span><code>N<span class="w"> </span>E<span class="w"> </span>X<span class="w"> </span>T<span class="w"> </span>F<span class="w"> </span>L<span class="w"> </span>O<span class="w"> </span>W<span class="w">  </span>~<span class="w">  </span>version<span class="w"> </span><span class="m">22</span>.10.1
+Using<span class="w"> </span>BAM<span class="w"> </span>directory:<span class="w"> </span>my_data/bams
+Using<span class="w"> </span>reference<span class="w"> </span>genome:<span class="w"> </span>my_data/genome.fasta
+</code></pre></div>
 <hr />
 
 
@@ -1128,7 +1081,7 @@ Hello,<span class="w"> </span>World!
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../environment_setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Local installation">
+          <a href="../running_pipeline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Running the Pipeline">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1138,27 +1091,11 @@ Hello,<span class="w"> </span>World!
                 Previous
               </span>
               <div class="md-ellipsis">
-                Local installation
+                Running the Pipeline
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../channels/" class="md-footer__link md-footer__link--next" aria-label="Next: Channels">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Channels
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

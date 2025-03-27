@@ -1,1 +1,8 @@
 .DS_Store
+.nextflow*
+work/
+training/
+data/
+test/
+results/
+

@@ -797,6 +797,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running the Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -811,32 +833,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../customizing_parameters.md" class="md-nav__link">
+      <a href="../customizing_parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Customizing Parameters
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../handling_multiple_samples.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Handling Multiple Samples
     
   </span>
   
@@ -874,11 +875,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../debugging_troubleshooting.md" class="md-nav__link">
+      <a href="../containers_reproducibility.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Debugging
+    Containers & Reproducibility
     
   </span>
   
@@ -900,27 +901,6 @@
   
   <span class="md-ellipsis">
     Best Practices
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../containers_reproducibility.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Containers & Reproducibility
     
   </span>
   
@@ -1052,7 +1032,7 @@
         each path(bam_file)
 
     output:
-        path &quot;${bam_basename}.variants&quot;, emit: variants
+        path &quot;${bam_basename}.variants.tsv&quot;, emit: variants
         path &quot;${bam_basename}.depths&quot;, emit: depths
 
     script:
@@ -1093,11 +1073,11 @@
 <h3 id="defining-outputs"><strong>Defining Outputs</strong></h3>
 <p>The output section specifies the channel that will be made available for other processes or workflows.</p>
 <div class="highlight"><pre><span></span><code>    output:
-        path &quot;${bam_basename}.variants&quot;, emit: variants
+        path &quot;${bam_basename}.variants.tsv&quot;, emit: variants
         path &quot;${bam_basename}.depths&quot;, emit: depths
 </code></pre></div>
 <ul>
-<li><code>${bam_basename}.variants</code> → Contains detected genetic variants.</li>
+<li><code>${bam_basename}.variants.tsv</code> → Contains detected genetic variants.</li>
 <li><code>${bam_basename}.depths</code> → Stores sequencing depth information.</li>
 <li><a href="https://www.nextflow.io/docs/latest/process.html#naming-outputs"><code>emit</code></a> labels (<code>variants</code> and <code>depths</code>) allow other processes to reference these outputs.</li>
 </ul>

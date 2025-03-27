@@ -17,17 +17,17 @@ Channels in Nextflow are one-directional and can be either:
 ---
 
 ## **Creating Channels**  
-Channels can be created using built-in [**factory methods**](https://www.nextflow.io/docs/latest/channel.html#channel-factories) like ``Channel.of()``, `Channel.from()`, `Channel.fromPath()` and `Channel.value()`.  
+Channels can be created using built-in [**factory factories**](https://nextflow.io/docs/latest/reference/channel.html) like `Channel.fromSRA()`, `Channel.fromPath()` and `Channel.value()`.  
 
 ---
 
-### **Example 1**: Creating a simple channel
+### **Example 1**: Creating a value channel
 ```nextflow
-sample_ch = Channel.of("sample1.fastq", "sample2.fastq", "sample3.fastq")
+sample_ch = Channel.value(2, 4, 8, 10)
 ```
 What this does:
 
-- Creates a channel containing paths to three FastQ file and assigns them to `sample_ch` varible.
+- Creates a channel containing four values and assigns them to `sample_ch` varible.
 - The `sample_ch` can now be passed as input to a process
 
 ---
@@ -44,3 +44,5 @@ This will create a channel that holds all FASTQ files in the data/ directory.
 - Channels **send** data to a process as input.
 - A process **modifies** the data and sends it to an **output channel**.
 - The **output channel** can then be used by another process.
+
+---
