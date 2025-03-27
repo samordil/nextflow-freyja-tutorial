@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../environment_setup/">
+        <link rel="prev" href="../customizing_parameters/">
       
-      
-        <link rel="next" href="../channels/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Overview - Nextflow & Freyja Tutorial</title>
+        <title>Best Practices - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-nextflow" class="md-skip">
+        <a href="#best-practices-for-organizing-nextflow-projects" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Best Practices
             
           </span>
         </div>
@@ -310,19 +308,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +333,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nextflow Basics
@@ -348,31 +344,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../nextflow_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,92 +357,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-use-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why use nextflow?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nextflow-script-basics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nextflow script basics
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nextflow script basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-hello-world-in-nextflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Hello World in Nextflow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-it-down" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking it down:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-your-first-nextflow-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running your first nextflow script
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Running your first nextflow script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -897,10 +786,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../best_practices/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -910,6 +820,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-organize-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Organize Your Project?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Project Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-keep-workflows-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Keep Workflows Modular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-nextflowconfig-for-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Use nextflow.config for Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-containers-for-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Containers for Reproducibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-document-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Document Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-version-control-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Version Control with Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -941,37 +958,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-use-nextflow" class="md-nav__link">
+  <a href="#why-organize-your-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Why use nextflow?
+      Why Organize Your Project?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nextflow-script-basics" class="md-nav__link">
+  <a href="#recommended-project-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Nextflow script basics
+      Recommended Project Structure
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Nextflow script basics">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-hello-world-in-nextflow" class="md-nav__link">
+  <a href="#1-keep-workflows-modular" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: Hello World in Nextflow
+      1. Keep Workflows Modular
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#breaking-it-down" class="md-nav__link">
+  <a href="#2-use-nextflowconfig-for-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Breaking it down:
+      2. Use nextflow.config for Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-containers-for-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Containers for Reproducibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-document-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Document Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-version-control-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Version Control with Git
     </span>
   </a>
   
@@ -983,26 +1036,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-your-first-nextflow-script" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Running your first nextflow script
+      Summary
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Running your first nextflow script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1022,82 +1060,83 @@
 
 
 
-<h1 id="introduction-to-nextflow"><strong>Introduction to nextflow</strong></h1>
-<p><a href="https://www.nextflow.io/docs/latest/overview.html">Nextflow</a> is a <strong>workflow management system</strong> designed to build and run computational pipelines. It is widely used in bioinformatics, data science, and HPC (High-Performance Computing).</p>
-<h2 id="why-use-nextflow"><strong>Why use nextflow?</strong></h2>
-<p>Nextflow makes workflows:</p>
+<h1 id="best-practices-for-organizing-nextflow-projects"><strong>Best Practices for Organizing Nextflow Projects</strong></h1>
+<h2 id="why-organize-your-project"><strong>Why Organize Your Project?</strong></h2>
+<p>A well-structured Nextflow project ensures <strong>better maintainability, collaboration, and reproducibility</strong>. Follow these best practices to keep your pipeline <strong>clean and scalable</strong>.</p>
 <ul>
-<li><strong>Reproducible</strong> – Ensures pipelines run the same way on different systems.  </li>
-<li><strong>Scalable</strong> – Works on laptops, HPC clusters, and cloud environments.  </li>
-<li><strong>Modular</strong> – Pipelines are broken into reusable processes (modules).  </li>
-<li><strong>Parallelized</strong> – Automatically runs tasks in parallel when possible.  </li>
+<li>Make it <strong>easy to navigate</strong>.  </li>
+<li>Enable <strong>reproducibility</strong> for future runs.  </li>
+<li>Improve <strong>collaboration</strong> with clear documentation.  </li>
 </ul>
 <hr />
-<h2 id="nextflow-script-basics"><strong>Nextflow script basics</strong></h2>
-<p>A Nextflow pipeline is written in <strong>nextflow DSL2 (Domain-Specific Language 2)</strong>. Let's look at a simple example:</p>
-<h3 id="example-hello-world-in-nextflow"><strong>Example: Hello World in Nextflow</strong></h3>
-<div class="highlight"><pre><span></span><code>#!/usr/bin/env nextflow     
-
-nextflow.enable.dsl=2
-
-process sayHello {
-    output:
-    stdout
-
-    script:
-    &quot;&quot;&quot;
-    echo &quot;Hello, World!&quot;
-    &quot;&quot;&quot;
-}
-
-workflow {
-    sayHello().view()
-}
+<h2 id="recommended-project-structure"><strong>Recommended Project Structure</strong></h2>
+<div class="highlight"><pre><span></span><code>nextflow_project/
+│── bin/                  # Custom scripts
+│── conf/                 # Configuration files
+│── docs/                 # Documentation and usage guides
+│── workflows/            # Main Nextflow workflows
+│── .gitignore            # Ignore unnecessary files
+│── main.nf               # Main pipeline script
+│── nextflow.config       # Nextflow configuration
+│── README.md             # Project overview
 </code></pre></div>
-<h3 id="breaking-it-down"><strong>Breaking it down:</strong></h3>
+<hr />
+<h2 id="key-best-practices"><strong>Key Best Practices</strong></h2>
+<h3 id="1-keep-workflows-modular">1. Keep Workflows Modular</h3>
 <ul>
-<li><strong><code>#!/usr/bin/env nextflow</code></strong><br />
-This tells the system to use <strong>Nextflow</strong> to execute the script.<br />
-<br></li>
-<li><strong><code>nextflow.enable.dsl=2</code></strong><br />
-Enables <strong>Nextflow DSL2</strong>, which is the latest and most flexible version.<br />
-<br></li>
-<li><strong>Defining a process (<code>process sayHello { ... }</code>)</strong><br />
-A process is a unit of execution. In this case, it runs a small shell command.<br />
-<br></li>
-<li>
-<p>The <strong>script section</strong> contains the actual command:
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Output section (<code>output: stdout</code>)</strong><br />
-Captures the <strong>output of the process</strong>, in this case, the text "Hello, World!".<br />
-<br></p>
-</li>
-<li><strong>Defining a workflow:</strong> 
-<div class="highlight"><pre><span></span><code>workflow<span class="w"> </span><span class="o">{</span><span class="w"> </span>
-<span class="w">    </span>sayHello<span class="o">()</span>.view<span class="o">()</span><span class="w"> </span>
+<li>Break large <code>main.nf</code> workflows into separate <strong>modules</strong>.<br />
+Example structure:
+<div class="highlight"><pre><span></span><code>workflows/
+│── main.nf
+│── modules/
+│   ├── preprocess.nf
+│   ├── analyze.nf
+│   ├── report.nf
+</code></pre></div></li>
+</ul>
+<hr />
+<h3 id="2-use-nextflowconfig-for-parameters"><strong>2. Use <code>nextflow.config</code> for Parameters</strong></h3>
+<ul>
+<li>Store <strong>all configuration settings</strong> in <code>nextflow.config</code> instead of hardcoding them in <code>main.nf</code>.<br />
+Example:
+<div class="highlight"><pre><span></span><code><span class="n">params</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">input_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;input/&#39;</span>
+<span class="w">    </span><span class="n">output_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;output/&#39;</span>
+<span class="w">    </span><span class="n">max_cpus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
 <span class="o">}</span>
-</code></pre></div>
-The <strong>workflow</strong> section defines how processes run. In larger pipelines, this is where you define how different processes connect. Here, it calls <code>sayHello()</code> process and <code>.view()</code> displays its output to the terminal.</li>
+</code></pre></div></li>
 </ul>
 <hr />
-<h2 id="running-your-first-nextflow-script"><strong>Running your first nextflow script</strong></h2>
-<p>Save this script as <strong><code>hello.nf</code></strong> and run it with:</p>
-<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>hello.nf
+<h3 id="3-use-containers-for-reproducibility"><strong>3. Use Containers for Reproducibility</strong></h3>
+<p><strong><a href="https://docs.docker.com/get-started/">Docker</a>/<a href="https://docs.sylabs.io/guides/3.0/user-guide/quick_start.html">Singularity</a></strong> ensures the same environment everywhere.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">process</span><span class="o">.</span><span class="na">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;freyja:latest&#39;</span>
 </code></pre></div>
-<h3 id="expected-output"><strong>Expected Output</strong></h3>
-<p>If everything is set up correctly, you should see something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span>N<span class="w"> </span>E<span class="w"> </span>X<span class="w"> </span>T<span class="w"> </span>F<span class="w"> </span>L<span class="w"> </span>O<span class="w"> </span>W<span class="w">   </span>~<span class="w">  </span>version<span class="w"> </span><span class="m">24</span>.10.5
-
-Launching<span class="w"> </span><span class="sb">`</span>hello.nf<span class="sb">`</span><span class="w"> </span><span class="o">[</span>drunk_gates<span class="o">]</span><span class="w"> </span>DSL2<span class="w"> </span>-<span class="w"> </span>revision:<span class="w"> </span>c2fd982266
-
-executor<span class="w"> </span>&gt;<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
-<span class="o">[</span>d4/99ae5a<span class="o">]</span><span class="w"> </span>sayHello<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>✔
-Hello,<span class="w"> </span>World!
-</code></pre></div>
-<p>This confirms that the sayHello process ran successfully once (1 of 1 ✔).</p>
+Define dependencies in a <code>Dockerfile</code> or <code>environment.yml</code>.</p>
+<hr />
+<h3 id="4-document-everything"><strong>4. Document Everything</strong></h3>
+<ul>
+<li>A <strong>clear README</strong> should explain how to run the pipeline.</li>
+<li>Include examples and expected outputs.</li>
+<li>Use <code>docs/</code> for detailed documentation.</li>
+</ul>
+<hr />
+<h3 id="5-version-control-with-git"><strong>5. Version Control with Git</strong></h3>
+<ul>
+<li>Use <strong><a href="https://git-scm.com/doc">Git</a></strong> to track changes and collaborate efficiently.</li>
+<li>Add a <code>.gitignore</code> file to exclude large datasets.</li>
+</ul>
+<p>Example <code>.gitignore</code>:
+<div class="highlight"><pre><span></span><code>output/
+.nextflow*
+work/
+</code></pre></div></p>
+<hr />
+<h2 id="summary"><strong>Summary</strong></h2>
+<p>✔ <strong>Use a modular structure</strong> for better maintainability.<br />
+✔ <strong>Define parameters in <code>nextflow.config</code></strong> for flexibility.<br />
+✔ <strong>Use containers</strong> to ensure reproducibility.<br />
+✔ <strong>Document workflows</strong> for easy onboarding.<br />
+✔ <strong>Version control</strong> everything with Git.  </p>
 <hr />
 
 
@@ -1128,7 +1167,7 @@ Hello,<span class="w"> </span>World!
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../environment_setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Local installation">
+          <a href="../customizing_parameters/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customizing Parameters">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1138,27 +1177,11 @@ Hello,<span class="w"> </span>World!
                 Previous
               </span>
               <div class="md-ellipsis">
-                Local installation
+                Customizing Parameters
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../channels/" class="md-footer__link md-footer__link--next" aria-label="Next: Channels">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Channels
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
