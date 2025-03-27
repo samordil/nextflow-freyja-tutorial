@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../connect_the_pieces/">
+      
+      
+        <link rel="next" href="../customizing_parameters/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Running pipeline - Nextflow & Freyja Tutorial</title>
+        <title>Running the Pipeline - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -104,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Running pipeline
+              Running the Pipeline
             
           </span>
         </div>
@@ -480,17 +484,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -505,7 +511,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Building Nextflow Pipeline
@@ -688,6 +694,111 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Running the Pipeline
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Running the Pipeline
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-running-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Running the Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-checking-output-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Checking Output Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Checking Output Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-process-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Process Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -702,32 +813,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../customizing_parameters.md" class="md-nav__link">
+      <a href="../customizing_parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Customizing Parameters
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../handling_multiple_samples.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Handling Multiple Samples
     
   </span>
   
@@ -765,11 +855,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../debugging_troubleshooting.md" class="md-nav__link">
+      <a href="../containers_reproducibility.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Debugging
+    Containers & Reproducibility
     
   </span>
   
@@ -791,27 +881,6 @@
   
   <span class="md-ellipsis">
     Best Practices
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../containers_reproducibility.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Containers & Reproducibility
     
   </span>
   
@@ -857,20 +926,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-checking-our-setup" class="md-nav__link">
+  <a href="#step-1-running-the-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Checking Our Setup
+      Step 1: Running the Pipeline
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-running-the-pipeline" class="md-nav__link">
+  <a href="#step-2-checking-output-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Running the Pipeline
+      Step 2: Checking Output Files
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Checking Output Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-process-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Process Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -890,9 +974,22 @@
 
 
 
-<div class="highlight"><pre><span></span><code>(training-tutorial) user-machine$ nextflow run main.nf 
-
- N E X T F L O W   ~  version 24.10.5
+<h1 id="running-and-testing-the-nextflow-pipeline"><strong>Running and Testing the Nextflow Pipeline</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>Now that we've set up our <strong>Nextflow pipeline</strong>, it's time to <strong>run it</strong> and see if everything works!<br />
+In this section, we will:  </p>
+<ul>
+<li>Run the pipeline step by step.  </li>
+<li>Check that our processes execute correctly.  </li>
+<li>Troubleshoot any potential errors.  </li>
+</ul>
+<hr />
+<h2 id="step-1-running-the-pipeline"><strong>Step 1: Running the Pipeline</strong></h2>
+<p>From your terminal run:  </p>
+<div class="highlight"><pre><span></span><code>nextflow run main.nf
+</code></pre></div>
+<p>Nextflow will execute the pipeline and display progress messages:</p>
+<p><div class="highlight"><pre><span></span><code> N E X T F L O W   ~  version 24.10.5
 
 Launching `main.nf` [nasty_gautier] DSL2 - revision: 43eb342fc2
 
@@ -900,25 +997,55 @@ executor &gt;  local (6)
 [c0/b014cd] FREYJA_VARIANTS (3) [100%] 3 of 3 ✔
 [7e/b05de0] FREYJA_DEMIX (2)    [100%] 3 of 3 ✔
 </code></pre></div>
-<h1 id="running-and-testing-the-nextflow-pipeline">🚀 <strong>Running and Testing the Nextflow Pipeline</strong></h1>
-<h2 id="overview"><strong>Overview</strong></h2>
-<p>Now that we've set up our <strong>Nextflow pipeline</strong>, it's time to <strong>run it</strong> and see if everything works!<br />
-In this section, we will:<br />
-✅ Run the pipeline step by step.<br />
-✅ Check that our processes execute correctly.<br />
-✅ Troubleshoot any potential errors.  </p>
+If you see ✔ for all processes, congratulations—your pipeline ran successfully!</p>
+<p>Let's break down what each part means:</p>
+<ul>
+<li><code>N E X T F L O W ~ version 24.10.5</code> → Confirms the Nextflow version you're using.</li>
+</ul>
 <hr />
-<h2 id="step-1-checking-our-setup"><strong>Step 1: Checking Our Setup</strong></h2>
-<p>Before running the pipeline, let’s make sure everything is in place:  </p>
-<p>✅ You have <strong>Nextflow</strong> installed (<code>nextflow -version</code>).<br />
-✅ Your <strong>project structure</strong> matches what we set up earlier.<br />
-✅ Your <strong>input data</strong> (FASTA and BAM files) are in the <code>data/</code> folder.  </p>
-<p>If everything looks good, let's move on! 🎯  </p>
+<ul>
+<li><code>Launching main.nf [nasty_gautier] DSL2 - revision: 43eb342fc2</code> → Shows that Nextflow is running main.nf using DSL2.</li>
+</ul>
 <hr />
-<h2 id="step-2-running-the-pipeline"><strong>Step 2: Running the Pipeline</strong></h2>
-<p>Open your <strong>terminal</strong> and navigate to your project directory:<br />
-```bash
-cd path/to/your/project</p>
+<ul>
+<li><code>executor &gt; local (6)</code> → Tells you that Nextflow is running processes on your local machine. The number (6) indicates the total number of tasks executed.</li>
+</ul>
+<hr />
+<ul>
+<li><code>[c0/b014cd] FREYJA_VARIANTS (3) [100%] 3 of 3 ✔</code> → Process Execution Progress. The FREYJA_VARIANTS process completed all 3 tasks successfully.  <ul>
+<li><code>[c0/b014cd]</code> → Unique task ID, useful for locating outputs in the <code>work/</code> directory.  </li>
+<li><code>FREYJA_VARIANTS</code> → The process name being executed.  </li>
+<li><code>(3)</code> → The last task label that was run. Since there are 3 samples, Nextflow runs 3 parallel tasks.  </li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><code>[7e/b05de0] FREYJA_DEMIX (2) [100%] 3 of 3 ✔</code> → Similar to FREYJA_VARIANTS, this line confirms that the FREYJA_DEMIX process also completed all tasks successfully.</li>
+</ul>
+<hr />
+<h2 id="step-2-checking-output-files"><strong>Step 2: Checking Output Files</strong></h2>
+<p>After the pipeline finishes running, you can check the generated output files. These files will be stored in the work/ directory and the specified output paths.</p>
+<h3 id="viewing-process-output"><strong>Viewing Process Output</strong></h3>
+<p>To check the output of a specific process, first, copy its unique task ID and use the ls command. For example:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>work/c0/b014cd
+</code></pre></div>
+<p>Press the Tab key to auto-complete the path, then press Enter. You should see output similar to this for one of the FREYJA_DEMIX tasks:</p>
+<div class="highlight"><pre><span></span><code><span class="n">variant</span><span class="p">.</span><span class="n">tsv</span><span class="w">  </span><span class="n">data</span>
+</code></pre></div>
+<p>If you want to view the contents of a file, use the less command instead of ls:</p>
+<div class="highlight"><pre><span></span><code>less<span class="w"> </span>work/c0/b014cd/variant.tsv
+</code></pre></div>
+<p>This will display the contents of the file, for example:</p>
+<div class="highlight"><pre><span></span><code>    sample.variants.tsv
+summarized  [(&#39;Other&#39;, 0.9999999999188374)]
+lineages    B.1.160.22
+abundances  1.00000000
+resid   4.696910204950047
+coverage    10.597598903120089
+</code></pre></div>
+<p>Now, let’s move on to organizing the output files from different processes and using custom parameters to refine our pipeline.</p>
+<hr />
 
 
 
@@ -943,6 +1070,44 @@ cd path/to/your/project</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../connect_the_pieces/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connecting the Pieces">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Connecting the Pieces
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../customizing_parameters/" class="md-footer__link md-footer__link--next" aria-label="Next: Customizing Parameters">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Customizing Parameters
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
