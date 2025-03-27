@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../processes/">
-      
-      
-        <link rel="next" href="../workflows/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Operators - Nextflow & Freyja Tutorial</title>
+        <title>Containers & Reproducibility in Nextflow - Nextflow & Freyja Tutorial</title>
       
     
     
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-operators-in-nextflow" class="md-skip">
+        <a href="#containers-reproducibility-in-nextflow" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operators
+              Containers &amp; Reproducibility in Nextflow
             
           </span>
         </div>
@@ -310,19 +306,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +331,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nextflow Basics
@@ -414,31 +408,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Operators
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../operators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,71 +421,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-are-operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Are Operators?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commonly-used-operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commonly Used Operators
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-1-using-map-to-transform-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 1: Using map to transform data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2-using-filter-to-select-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 2: Using filter to select data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-3-using-grouptuple-to-organize-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 3: Using groupTuple to Organize Data
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -944,47 +852,137 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-operators" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What Are Operators?
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#commonly-used-operators" class="md-nav__link">
+  <a href="#why-use-containers" class="md-nav__link">
     <span class="md-ellipsis">
-      Commonly Used Operators
+      Why Use Containers?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Use Containers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-docker-with-nextflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Docker with Nextflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Docker with Nextflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Docker
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-1-using-map-to-transform-data" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#step-2-define-a-docker-image-in-nextflowconfig" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Using map to transform data
+      Step 2: Define a Docker Image in nextflow.config
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2-using-filter-to-select-data" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-your-pipeline-with-docker" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 2: Using filter to select data
+      Step 3: Run Your Pipeline with Docker
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-3-using-grouptuple-to-organize-data" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#using-singularity-for-hpc-clusters" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 3: Using groupTuple to Organize Data
+      Using Singularity for HPC Clusters
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-singularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Singularity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-use-singularity-in-nextflowconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Use Singularity in nextflow.config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-your-pipeline-with-singularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Run Your Pipeline with Singularity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-conda-for-dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Conda for Dependency Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Conda for Dependency Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-conda-dependencies-in-nextflowconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Define Conda Dependencies in nextflow.config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-your-pipeline-with-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Run Your Pipeline with Conda
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1004,89 +1002,66 @@
 
 
 
-<h1 id="understanding-operators-in-nextflow"><strong>Understanding Operators in Nextflow</strong></h1>
-<h2 id="what-are-operators"><strong>What Are Operators?</strong></h2>
-<p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#operators"><strong>Operators</strong></a> in Nextflow allow you to <strong>manipulate</strong> and <strong>transform</strong> data as it flows through channels.
-They help modify, filter, and combine data before passing it to a process.  </p>
+<h1 id="containers-reproducibility-in-nextflow"><strong>Containers &amp; Reproducibility in Nextflow</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>Reproducibility is a <strong>key challenge</strong> in bioinformatics workflows. Different environments may have different software versions, leading to inconsistent results.  </p>
+<p>To solve this, <strong>Nextflow supports containers</strong> like:</p>
+<ul>
+<li><strong><a href="https://docs.docker.com/get-started/">Docker</a></strong> – A widely used containerization tool.  </li>
+<li><strong><a href="https://docs.sylabs.io/guides/3.0/user-guide/quick_start.html">Singularity</a></strong> – Preferred for <strong>HPC (high-performance computing)</strong> environments.  </li>
+<li><strong><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">Conda</a></strong> – A package manager for dependency management.  </li>
+</ul>
+<p>Using containers ensures that your pipeline runs identically on any system!</p>
 <hr />
-<h2 id="commonly-used-operators"><strong>Commonly Used Operators</strong></h2>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.nextflow.io/docs/latest/reference/operator.html#map"><code>map</code></a></td>
-<td>Transforms each element in a channel</td>
-<td>Convert file names to uppercase</td>
-</tr>
-<tr>
-<td><a href="https://www.nextflow.io/docs/latest/reference/operator.html#filter"><code>filter</code></a></td>
-<td>Selects elements that match a condition</td>
-<td>Keep only <code>.txt</code> files</td>
-</tr>
-<tr>
-<td><a href="https://www.nextflow.io/docs/latest/reference/operator.html#collect"><code>collect</code></a></td>
-<td>Gathers all elements into a single list</td>
-<td>Collect all sample names</td>
-</tr>
-<tr>
-<td><a href="https://www.nextflow.io/docs/latest/reference/operator.html#flatten"><code>flatten</code></a></td>
-<td>Flattens nested lists into a single list</td>
-<td>Convert list of lists into one</td>
-</tr>
-<tr>
-<td><a href="https://www.nextflow.io/docs/latest/reference/operator.html#grouptuple"><code>groupTuple</code></a></td>
-<td>Groups data into pairs</td>
-<td>Pair samples with metadata</td>
-</tr>
-</tbody>
-</table>
+<h2 id="why-use-containers"><strong>Why Use Containers?</strong></h2>
+<ul>
+<li><strong>Avoids dependency issues</strong> – No need to manually install software.  </li>
+<li><strong>Ensures reproducibility</strong> – The same environment every time.  </li>
+<li><strong>Easy to share</strong> – Just send your containerized pipeline to collaborators.  </li>
+<li><strong>Compatible with HPC clusters</strong> – Works with Singularity and Conda.  </li>
+</ul>
 <hr />
-<h2 id="example-1-using-map-to-transform-data"><strong>Example 1</strong>: Using <code>map</code> to transform data</h2>
-<p>The <strong><code>map</code></strong> operator applies a function to every element in a channel.  </p>
-<p><div class="highlight"><pre><span></span><code>Channel.from(&quot;sample1.txt&quot;, &quot;sample2.txt&quot;, &quot;sample3.txt&quot;)
-    | map { it.toUpperCase() }
-    | view()
+<h3 id="using-docker-with-nextflow"><strong>Using Docker with Nextflow</strong></h3>
+<p>Docker packages everything needed for your pipeline into an isolated environment.  </p>
+<h4 id="step-1-install-docker"><strong>Step 1: Install Docker</strong></h4>
+<p>Follow the official guide: <a href="https://docs.docker.com/get-docker/">Docker Installation</a>  </p>
+<h4 id="step-2-define-a-docker-image-in-nextflowconfig"><strong>Step 2: Define a Docker Image in <code>nextflow.config</code></strong></h4>
+<div class="highlight"><pre><span></span><code>process {
+    container &#39;freyja:latest&#39;
+}
 </code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>SAMPLE1.TXT  
-SAMPLE2.TXT  
-SAMPLE3.TXT  
-</code></pre></div></p>
-<hr />
-<h2 id="example-2-using-filter-to-select-data"><strong>Example 2</strong>: Using <code>filter</code> to select data</h2>
-<p>The <code>filter</code> operator removes unwanted elements based on a condition.
-<div class="highlight"><pre><span></span><code>Channel.from(&quot;data1.txt&quot;, &quot;image.png&quot;, &quot;data2.txt&quot;)
-    | filter { it.endsWith(&#39;.txt&#39;) }
-    | view()
+<p>This tells Nextflow to use the freyja Docker image when running processes.</p>
+<h3 id="step-3-run-your-pipeline-with-docker"><strong>Step 3: Run Your Pipeline with Docker</strong></h3>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>-with-docker
 </code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>data1.txt  
-data2.txt  
-</code></pre></div></p>
+<p>Nextflow will automatically pull the container and run everything inside it!</p>
 <hr />
-<h2 id="example-3-using-grouptuple-to-organize-data"><strong>Example 3</strong>: Using <code>groupTuple</code> to Organize Data</h2>
-<p>The <code>groupTuple</code> operator groups elements into structured tuples.
-<div class="highlight"><pre><span></span><code>Channel.from([&quot;A&quot;, &quot;B&quot;, &quot;C&quot;], [1, 2, 3])
-    | groupTuple()
-    | view()
+<h3 id="using-singularity-for-hpc-clusters"><strong>Using Singularity for HPC Clusters</strong></h3>
+<p>If your system doesn’t support Docker (e.g., on HPC clusters), use Singularity instead.</p>
+<h3 id="step-1-install-singularity"><strong>Step 1: Install Singularity</strong></h3>
+<p>Follow the official guide: Singularity Installation</p>
+<h3 id="step-2-use-singularity-in-nextflowconfig"><strong>Step 2: Use Singularity in nextflow.config</strong></h3>
+<p><div class="highlight"><pre><span></span><code>process {
+    container &#39;docker://freyja:latest&#39;
+}
 </code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>[A, 1]  
-[B, 2]  
-[C, 3]  
-</code></pre></div></p>
+Singularity can pull and use Docker images, making it HPC-compatible.</p>
+<h3 id="step-3-run-your-pipeline-with-singularity"><strong>Step 3: Run Your Pipeline with Singularity</strong></h3>
+<p><div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>-with-singularity
+</code></pre></div>
+This runs your pipeline inside a secure Singularity container!</p>
 <hr />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In Nextflow, you can connect channels and operators using the <a href="https://www.nextflow.io/docs/latest/workflow.html#pipe">pipe (<code>|</code>)</a> symbol.<br />
-The <a href="https://www.nextflow.io/docs/latest/reference/operator.html#view"><code>view</code></a> operator is one example of an operator that processes and displays data in a pipeline.</p>
-</div>
+<h2 id="using-conda-for-dependency-management"><strong>Using Conda for Dependency Management</strong></h2>
+<p>If you can’t use Docker or Singularity, use Conda to install packages locally.</p>
+<h3 id="step-1-define-conda-dependencies-in-nextflowconfig"><strong>Step 1: Define Conda Dependencies in nextflow.config</strong></h3>
+<div class="highlight"><pre><span></span><code>process {
+    conda &#39;bioconda::freyja&#39;
+}
+</code></pre></div>
+<h3 id="step-2-run-your-pipeline-with-conda"><strong>Step 2: Run Your Pipeline with Conda</strong></h3>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>-with-conda
+</code></pre></div>
+<p>Nextflow will automatically create a Conda environment for each process!</p>
 <hr />
 
 
@@ -1112,44 +1087,6 @@ The <a href="https://www.nextflow.io/docs/latest/reference/operator.html#view"><
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Processes">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Processes
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../workflows/" class="md-footer__link md-footer__link--next" aria-label="Next: Workflows">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Workflows
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
