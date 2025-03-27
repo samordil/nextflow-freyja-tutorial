@@ -42,10 +42,10 @@ nav:
           - Demix Module: demix.md
       - Connecting the Pieces: connect_the_pieces.md
       - Running the Pipeline: running_pipeline.md
-  - Customizing Parameters: customizing_parameters.md
-  - Parallel Execution: parallel_execution.md
-  - Containers & Reproducibility: containers_reproducibility.md
+      - Customizing Parameters: customizing_parameters.md
   - Best Practices: best_practices.md
+  - Try It Yourself: 
+    - Extend the Pipeline: exercise.md 
  
 markdown_extensions:
   - admonition             # Enables admonitions like notes, warnings, tips, etc !!! note/warning/tip

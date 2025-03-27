@@ -32,9 +32,6 @@ This tutorial is designed to teach you [Nextflow](https://www.nextflow.io/docs/l
 ### **Hands-on Exercises**
 - Running a basic pipeline
 - Modifying the workflow (e.g., changing parameters)
-- Interpreting Freyja’s output
 
-### **Advanced Topics**
-- Using containers (Docker/Singularity) for reproducibility
-- Scaling with cloud or HPC
-- Adding error handling and logging
+### **Try It Yourself**  
+- Extend the pipeline with additional processes
